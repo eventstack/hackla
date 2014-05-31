@@ -69,8 +69,8 @@
 
             $ ( document ).ready ( function ( ) {
 
-                $("#green-map").width=$(window).width()*.90;
-                $("#green-map").height=$(window).height()*.90;
+                $("#green-map" ).css("width",$(window).width()*.90);
+                $("#green-map" ).css("height",$(window).height()*.90);
                 window.onload = Gmap.loadMapScript;
                 google.maps.event.trigger(map, "resize");
 
