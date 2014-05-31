@@ -157,7 +157,16 @@
                     $("#search-criteria").hide(500);
 
                 });
+
+
                 $("#frm").submit(function(event) {
+                    directionsDisplay = new google.maps.DirectionsRenderer();
+                    directionsDisplay.setMap(map);
+
+
+                    Gmap.calcRouter();
+
+
                     console.log("submit");
                     event.preventDefault();
                     console.log(event.currentTarget);
@@ -195,6 +204,8 @@
                 });
 
             });
+
+
 
 
         </script>
