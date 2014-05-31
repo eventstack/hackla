@@ -14,6 +14,10 @@ function calculateEmissionsForCommuterTrain(miles) {
     return miles * .177;
 }
 
+function calculateEmissionsForLightRail(miles) {
+    return miles * .202;
+}
+
 function calculateEmissionsForCommuterBus(miles) {
     return miles * .299;
 }
