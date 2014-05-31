@@ -9,7 +9,7 @@ Gmap.accessibleLocations=[];
 Gmap.bounds;
 Gmap.infoWindow;
 Gmap.geocoder={};
-var directionsDisplay;
+var directionsService;
 var currentLocationLoad=true;
 
 var bounds;
@@ -71,6 +71,7 @@ Gmap.initialize = function() {
 
 }
 Gmap.calcRouter=function () {
+    var directons
     var start = document.getElementById("start-address").value;
     var end = document.getElementById("end-address").value;
     var request = {
@@ -137,7 +138,8 @@ Gmap.calcRouter=function () {
 
 
             }) ;
-            drawRoute(start,min_leg1_pair.end,"car");
+            //console.log(start, min_leg1_pair.)
+            drawRoute(min_leg1_pair.start,min_leg1_pair.end,"car");
 
             getTransitDirections(min_leg1_pair.end, end, function(transitResult) {
                 console.log("got directions from charge " + min_leg1_pair.end + " to " + end);
@@ -162,34 +164,38 @@ Gmap.calcRouter=function () {
 
     });
 }
+function renderDirections(result) {
+    var directionsRenderer = new google.maps.DirectionsRenderer();
+    directionsRenderer.setMap(map);
+    directionsRenderer.setDirections(result);
+}
+
 function drawRoute(start,end, mode)
 {
     console.log("start"+start+" end "+end+" mode "+mode);
-    var request ={};
+
     if(mode=="car") {
-        request = {
+        directionsService.route({
             origin: start,
             destination: end,
-            travelMode: google.maps.TravelMode.DRIVING
-        };
+            travelMode: google.maps.DirectionsTravelMode.DRIVING
+        }, function(result) {
+            renderDirections(result);
+
+        });
     }
     else if(mode=="transit")
     {
-        request = {
+        directionsService.route({
             origin: start,
             destination: end,
-            travelMode: google.maps.TravelMode.TRANSIT
-        };
-    }
-    var directionsService = new google.maps.DirectionsService();
-    var directionsDisplay = new google.maps.DirectionsRenderer();
-    directionsDisplay.setMap(map);
+            travelMode: google.maps.DirectionsTravelMode.TRANSIT
+        }, function(result) {
+            renderDirections(result);
 
-    directionsService.route(request, function(result, status) {
-        if (status == google.maps.DirectionsStatus.OK) {
-            directionsDisplay.setDirections(result);
-        }
-    });
+        });
+    }
+
 }
 function geoError() {
     alert("Geocoder failed.");
