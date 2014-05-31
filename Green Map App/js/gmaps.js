@@ -167,6 +167,7 @@ function renderDirections(result) {
     var directionsRenderer = new google.maps.DirectionsRenderer();
     directionsRenderer.setMap(map);
     directionsRenderer.setDirections(result);
+    return false;
 
 }
 
@@ -207,6 +208,7 @@ function drawRoute(start,end, mode,distance)
 
         });
     }
+    return false;
 
 }
 function geoError() {
