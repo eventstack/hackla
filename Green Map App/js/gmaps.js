@@ -11,14 +11,12 @@ Gmap.infoWindow;
 Gmap.geocoder={};
 var directionsDisplay;
 var currentLocationLoad=true;
-var directionsDisplay;
-var directionsService ;
+
 var bounds;
 
 var rad = 0;
 
-var directionsDisplay;
-var directionsService;
+
 var boundsListener;
 var search = false;
 var timeout;
@@ -35,8 +33,7 @@ Gmap.loadMapScript = function() {
 }
 
 Gmap.initialize = function() {
-    directionsService = new google.maps.DirectionsService();
-    directionsDisplay = new google.maps.DirectionsRenderer();
+
 
     Gmap.geocoder = new google.maps.Geocoder();
     Gmap.bounds = new google.maps.LatLngBounds();
@@ -47,7 +44,7 @@ Gmap.initialize = function() {
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     map = new google.maps.Map(document.getElementById("green-map"), mapOptions);
-    directionsDisplay.setMap(map);
+
     Gmap.infoWindow = new google.maps.InfoWindow;
     google.maps.event.addListener(map, 'click', function() {
         Gmap.infoWindow.close();
@@ -150,7 +147,7 @@ Gmap.calcRouter=function () {
                 station_distance_pair.end=end;
                 station_distance_pair.distance=transitResult.routes[0].legs[0].distance.value;
                 console.log("transit "+station_distance_pair.distance);
-                //drawRoute(min_leg1_pair.end,end,"transit");
+                drawRoute(min_leg1_pair.end,end,"transit");
             });
 
 
@@ -184,6 +181,10 @@ function drawRoute(start,end, mode)
             travelMode: google.maps.TravelMode.TRANSIT
         };
     }
+    var directionsService = new google.maps.DirectionsService();
+    var directionsDisplay = new google.maps.DirectionsRenderer();
+    directionsDisplay.setMap(map);
+
     directionsService.route(request, function(result, status) {
         if (status == google.maps.DirectionsStatus.OK) {
             directionsDisplay.setDirections(result);
