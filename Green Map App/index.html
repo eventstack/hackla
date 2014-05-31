@@ -21,8 +21,34 @@
   </head>
   <body>
     <div class="container">
-        Start doing your next awesomeness here.
+
+        <div class="row demo-row"  style="padding: 5px; ">
+
+            <div class="col-xs-12" style="float: right">
+                <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                            <span class="sr-only">Toggle navigation</span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse-01" style="background: #2ECC71">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li><a href="/"><img src="images/Environmental_-_big.gif" style="height: 50px; padding-right: 15px;"/>Green Map App  </a></li>
+                            <li><a href="http://www.hackforla.org/" target="_blank"><img src="" style="height: 50px; padding-right: 5px;"/>Hack For LA</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </nav><!-- /navbar -->
+            </div>
     </div>
+        <div class="map-container" id="map">
+            <div id="search-box"  class=" search-box controls-search">
+                <input id="pac-input"   type="text" placeholder="Search Box">
+                <div style="display: none"id="search-criteria" class="col-xs-12 center">
+
+
+                </div>
+            </div>
+            <div id="green-map" style="width: 1000px; height: 600px;"></div></div></div>
     <!-- /.container -->
 
 
@@ -39,5 +65,18 @@
     <script src="js/jquery.tagsinput.js"></script>
     <script src="js/jquery.placeholder.js"></script>
     <script src="js/gmaps.js"></script>
+        <script>
+
+            $ ( document ).ready ( function ( ) {
+
+                $("#green-map").width=$(window).width()*.90;
+                $("#green-map").height=$(window).height()*.90;
+                window.onload = Gmap.loadMapScript;
+                google.maps.event.trigger(map, "resize");
+
+            });
+
+
+        </script>
   </body>
 </html>

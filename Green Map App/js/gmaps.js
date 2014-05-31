@@ -10,21 +10,9 @@ Gmap.bounds;
 Gmap.infoWindow;
 var currentLocationLoad=true;
 var bounds;
-var currentBoundsDistance;
+
 var rad = 0;
-var pricingPolicy;
-var searchBox;
-var all_stations = true;
-var my_stations = false;
-var avail_stations = false;
-var rad_all = true;
-var rad_1_mile = false;
-var rad_5_miles= false;
-var rad_10_miles= false;
-var power_1 = true;
-var power_2 = true;
-var power_3= true;
-var handicap = false;
+
 var boundsListener;
 var search = false;
 var timeout;
@@ -40,6 +28,7 @@ Gmap.loadMapScript = function() {
 }
 
 Gmap.initialize = function() {
+    console.log("here");
     Gmap.bounds = new google.maps.LatLngBounds();
 
     var mapOptions = {
@@ -47,7 +36,8 @@ Gmap.initialize = function() {
         center: new google.maps.LatLng(33.992339, -118.442277),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
-    map = new google.maps.Map(document.getElementById("station-map"), mapOptions);
+    map = new google.maps.Map(document.getElementById("green-map"), mapOptions);
+    console.log("here");
     Gmap.infoWindow = new google.maps.InfoWindow;
     google.maps.event.addListener(map, 'click', function() {
         Gmap.infoWindow.close();
@@ -61,12 +51,9 @@ Gmap.initialize = function() {
         document.getElementById('search-box'));
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-    setUpMapSearch();
 
-    showCurrentLocation();
-    getAccessibleLocations();
     //refresh map every 5 minutes
-    timeout = setTimeout(getAccessibleLocations, 300000);
+
 
 }
 function boundsChanged()
