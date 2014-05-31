@@ -20,6 +20,7 @@ var rad = 0;
 var boundsListener;
 var search = false;
 var timeout;
+var renderingList = [];
 
 Gmap.loadMapScript = function() {
 
@@ -71,19 +72,15 @@ Gmap.initialize = function() {
 
 }
 Gmap.calcRouter=function () {
-    var directons
+
+    var directons;
+
+
     var start = document.getElementById("start-address").value;
     var end = document.getElementById("end-address").value;
-    var request = {
-        origin:start,
-        destination:end,
-        travelMode: google.maps.TravelMode.DRIVING
-    };
-    directionsService.route(request, function(result, status) {
-        if (status == google.maps.DirectionsStatus.OK) {
-            directionsDisplay.setDirections(result);
-        }
-    });
+
+
+
 
     getEvcLocations(function(chargeStationData) {
         console.log(chargeStationData);
@@ -93,7 +90,6 @@ Gmap.calcRouter=function () {
 
         var direction_results_leg2=[];
         var min_leg1_pair=null;
-        var min_leg2_pair=null;
 
         chargeStationData.locations.forEach(function(chargeStation) {
             console.log(chargeStation);
@@ -164,8 +160,10 @@ Gmap.calcRouter=function () {
 
     });
 }
+
 function renderDirections(result) {
     var directionsRenderer = new google.maps.DirectionsRenderer();
+    renderingList.push(directionsRenderer);
     directionsRenderer.setMap(map);
     directionsRenderer.setDirections(result);
 }
