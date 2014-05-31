@@ -1,0 +1,487 @@
+{
+  "meta" : {
+    "view" : {
+      "id" : "wvq8-eni2",
+      "name" : "ExpoLineSta0512",
+      "averageRating" : 0,
+      "createdAt" : 1398804681,
+      "displayType" : "geoRows",
+      "downloadCount" : 0,
+      "indexUpdatedAt" : 1398828098,
+      "newBackend" : false,
+      "numberOfComments" : 0,
+      "oid" : 7878682,
+      "publicationAppendEnabled" : false,
+      "publicationGroup" : 1563379,
+      "publicationStage" : "published",
+      "tableId" : 1563379,
+      "totalTimesRated" : 0,
+      "viewCount" : 1,
+      "viewLastModified" : 1398804681,
+      "viewType" : "tabular",
+      "columns" : [ {
+        "id" : -1,
+        "name" : "sid",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":sid",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "id",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":id",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "position",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":position",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "created_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "created_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "updated_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "updated_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : 145749156,
+        "name" : "STASEQ",
+        "dataTypeName" : "number",
+        "fieldName" : "staseq",
+        "position" : 1,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19463204,
+        "cachedContents" : {
+          "non_null" : 12,
+          "smallest" : "1",
+          "sum" : "78",
+          "null" : 0,
+          "average" : "6.5",
+          "largest" : "12",
+          "top" : [ {
+            "count" : 20,
+            "item" : "10"
+          }, {
+            "count" : 19,
+            "item" : "5"
+          }, {
+            "count" : 18,
+            "item" : "4"
+          }, {
+            "count" : 17,
+            "item" : "9"
+          }, {
+            "count" : 16,
+            "item" : "3"
+          }, {
+            "count" : 15,
+            "item" : "2"
+          }, {
+            "count" : 14,
+            "item" : "8"
+          }, {
+            "count" : 13,
+            "item" : "7"
+          }, {
+            "count" : 12,
+            "item" : "6"
+          }, {
+            "count" : 11,
+            "item" : "1"
+          }, {
+            "count" : 10,
+            "item" : "11"
+          }, {
+            "count" : 9,
+            "item" : "12"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749155,
+        "name" : "LINE",
+        "dataTypeName" : "text",
+        "fieldName" : "line",
+        "position" : 1,
+        "renderTypeName" : "text",
+        "tableColumnId" : 19463203,
+        "cachedContents" : {
+          "non_null" : 12,
+          "smallest" : "Expo",
+          "null" : 0,
+          "largest" : "Expo",
+          "top" : [ {
+            "count" : 20,
+            "item" : "Expo"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749157,
+        "name" : "LATITUDE",
+        "dataTypeName" : "number",
+        "fieldName" : "latitude",
+        "position" : 2,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19463205,
+        "cachedContents" : {
+          "non_null" : 12,
+          "smallest" : "34.01822700000000310183168039657175540924072265625",
+          "sum" : "408.32092499999999546389517490752041339874267578125",
+          "null" : 0,
+          "average" : "34.02674375000000",
+          "largest" : "34.04860999999999648935045115649700164794921875",
+          "top" : [ {
+            "count" : 20,
+            "item" : "34.02911199999999780629877932369709014892578125"
+          }, {
+            "count" : 19,
+            "item" : "34.022525999999999157807906158268451690673828125"
+          }, {
+            "count" : 18,
+            "item" : "34.02398099999999914189174887724220752716064453125"
+          }, {
+            "count" : 17,
+            "item" : "34.02212300000000055888449423946440219879150390625"
+          }, {
+            "count" : 16,
+            "item" : "34.02480299999999857618604437448084354400634765625"
+          }, {
+            "count" : 15,
+            "item" : "34.02635500000000234877006732858717441558837890625"
+          }, {
+            "count" : 14,
+            "item" : "34.01822700000000310183168039657175540924072265625"
+          }, {
+            "count" : 13,
+            "item" : "34.01824500000000028876456781290471553802490234375"
+          }, {
+            "count" : 12,
+            "item" : "34.0183310000000034278855309821665287017822265625"
+          }, {
+            "count" : 11,
+            "item" : "34.02787699999999659894456272013485431671142578125"
+          }, {
+            "count" : 10,
+            "item" : "34.0407349999999979672793415375053882598876953125"
+          }, {
+            "count" : 9,
+            "item" : "34.04860999999999648935045115649700164794921875"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749158,
+        "name" : "LONGITUDE",
+        "dataTypeName" : "number",
+        "fieldName" : "longitude",
+        "position" : 3,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19463206,
+        "cachedContents" : {
+          "non_null" : 12,
+          "smallest" : "-118.3888950000000050977178034372627735137939453125",
+          "sum" : "-1419.7601920000000035315679269842803478240966796875",
+          "null" : 0,
+          "average" : "-118.3133493333333",
+          "largest" : "-118.2588219999999950005076243542134761810302734375",
+          "top" : [ {
+            "count" : 20,
+            "item" : "-118.2736029999999942674548947252333164215087890625"
+          }, {
+            "count" : 19,
+            "item" : "-118.3350779999999957681211526505649089813232421875"
+          }, {
+            "count" : 18,
+            "item" : "-118.3460950000000053705662139691412448883056640625"
+          }, {
+            "count" : 17,
+            "item" : "-118.27811800000000630461727268993854522705078125"
+          }, {
+            "count" : 16,
+            "item" : "-118.3551590000000004465618985705077648162841796875"
+          }, {
+            "count" : 15,
+            "item" : "-118.372119999999995343387126922607421875"
+          }, {
+            "count" : 14,
+            "item" : "-118.2857340000000050395101425237953662872314453125"
+          }, {
+            "count" : 13,
+            "item" : "-118.29153999999999768988345749676227569580078125"
+          }, {
+            "count" : 12,
+            "item" : "-118.308909999999997353370417840778827667236328125"
+          }, {
+            "count" : 11,
+            "item" : "-118.3888950000000050977178034372627735137939453125"
+          }, {
+            "count" : 10,
+            "item" : "-118.26611800000000584986992180347442626953125"
+          }, {
+            "count" : 9,
+            "item" : "-118.2588219999999950005076243542134761810302734375"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749159,
+        "name" : "STATION",
+        "dataTypeName" : "text",
+        "fieldName" : "station",
+        "position" : 4,
+        "renderTypeName" : "text",
+        "tableColumnId" : 19463207,
+        "cachedContents" : {
+          "non_null" : 12,
+          "smallest" : "23rd St",
+          "null" : 0,
+          "largest" : "Pico",
+          "top" : [ {
+            "count" : 20,
+            "item" : "23rd St"
+          }, {
+            "count" : 19,
+            "item" : "Expo / Crenshaw"
+          }, {
+            "count" : 18,
+            "item" : "Farmdale"
+          }, {
+            "count" : 17,
+            "item" : "Jefferson / USC"
+          }, {
+            "count" : 16,
+            "item" : "Expo / La Brea"
+          }, {
+            "count" : 15,
+            "item" : "La Cienega / Jefferson"
+          }, {
+            "count" : 14,
+            "item" : "Expo Park / USC"
+          }, {
+            "count" : 13,
+            "item" : "Expo / Vermont"
+          }, {
+            "count" : 12,
+            "item" : "Expo / Western"
+          }, {
+            "count" : 11,
+            "item" : "Culver City"
+          }, {
+            "count" : 10,
+            "item" : "Pico"
+          }, {
+            "count" : 9,
+            "item" : "Metro Center"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749160,
+        "name" : "OLDSTOPNUM",
+        "dataTypeName" : "number",
+        "fieldName" : "oldstopnum",
+        "position" : 5,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19463208,
+        "cachedContents" : {
+          "non_null" : 12,
+          "smallest" : "80000021",
+          "sum" : "960001078",
+          "null" : 0,
+          "average" : "80000089.83333333",
+          "largest" : "80000108",
+          "top" : [ {
+            "count" : 20,
+            "item" : "80000099"
+          }, {
+            "count" : 19,
+            "item" : "80000104"
+          }, {
+            "count" : 18,
+            "item" : "80000105"
+          }, {
+            "count" : 17,
+            "item" : "80000100"
+          }, {
+            "count" : 16,
+            "item" : "80000106"
+          }, {
+            "count" : 15,
+            "item" : "80000107"
+          }, {
+            "count" : 14,
+            "item" : "80000101"
+          }, {
+            "count" : 13,
+            "item" : "80000102"
+          }, {
+            "count" : 12,
+            "item" : "80000103"
+          }, {
+            "count" : 11,
+            "item" : "80000108"
+          }, {
+            "count" : 10,
+            "item" : "80000021"
+          }, {
+            "count" : 9,
+            "item" : "80000022"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749161,
+        "name" : "STOPNUMNEW",
+        "dataTypeName" : "number",
+        "fieldName" : "stopnumnew",
+        "position" : 6,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19463209,
+        "cachedContents" : {
+          "non_null" : 12,
+          "smallest" : "80121",
+          "sum" : "961518",
+          "null" : 0,
+          "average" : "80126.5",
+          "largest" : "80132",
+          "top" : [ {
+            "count" : 20,
+            "item" : "80123"
+          }, {
+            "count" : 19,
+            "item" : "80128"
+          }, {
+            "count" : 18,
+            "item" : "80129"
+          }, {
+            "count" : 17,
+            "item" : "80124"
+          }, {
+            "count" : 16,
+            "item" : "80130"
+          }, {
+            "count" : 15,
+            "item" : "80131"
+          }, {
+            "count" : 14,
+            "item" : "80125"
+          }, {
+            "count" : 13,
+            "item" : "80126"
+          }, {
+            "count" : 12,
+            "item" : "80127"
+          }, {
+            "count" : 11,
+            "item" : "80132"
+          }, {
+            "count" : 10,
+            "item" : "80121"
+          }, {
+            "count" : 9,
+            "item" : "80122"
+          } ]
+        },
+        "format" : {
+        }
+      } ],
+      "grants" : [ {
+        "inherited" : false,
+        "type" : "viewer",
+        "flags" : [ "public" ]
+      } ],
+      "owner" : {
+        "id" : "8b8n-vh2w",
+        "displayName" : "LA DOT OpenData",
+        "profileImageUrlLarge" : "/images/profile/0814/0098/_City_Seal_large.jpg",
+        "profileImageUrlMedium" : "/images/profile/0814/0098/_City_Seal_thumb.jpg",
+        "profileImageUrlSmall" : "/images/profile/0814/0098/_City_Seal_tiny.jpg",
+        "roleName" : "editor",
+        "screenName" : "LA DOT OpenData",
+        "rights" : [ "create_datasets", "edit_others_datasets", "chown_datasets", "view_domain", "create_pages", "view_goals", "view_dashboards" ]
+      },
+      "query" : {
+      },
+      "rights" : [ "read" ],
+      "tableAuthor" : {
+        "id" : "8b8n-vh2w",
+        "displayName" : "LA DOT OpenData",
+        "profileImageUrlLarge" : "/images/profile/0814/0098/_City_Seal_large.jpg",
+        "profileImageUrlMedium" : "/images/profile/0814/0098/_City_Seal_thumb.jpg",
+        "profileImageUrlSmall" : "/images/profile/0814/0098/_City_Seal_tiny.jpg",
+        "roleName" : "editor",
+        "screenName" : "LA DOT OpenData",
+        "rights" : [ "create_datasets", "edit_others_datasets", "chown_datasets", "view_domain", "create_pages", "view_goals", "view_dashboards" ]
+      },
+      "flags" : [ "default" ]
+    }
+  },
+  "data" : [ [ 1, "geo_8jta-2ef4-2.1", null, null, null, null, null, null, "10", "Expo", "34.02911199999999780629877932369709014892578125", "-118.2736029999999942674548947252333164215087890625", "23rd St", "80000099", "80123" ]
+, [ 2, "geo_8jta-2ef4-2.2", null, null, null, null, null, null, "5", "Expo", "34.022525999999999157807906158268451690673828125", "-118.3350779999999957681211526505649089813232421875", "Expo / Crenshaw", "80000104", "80128" ]
+, [ 3, "geo_8jta-2ef4-2.3", null, null, null, null, null, null, "4", "Expo", "34.02398099999999914189174887724220752716064453125", "-118.3460950000000053705662139691412448883056640625", "Farmdale", "80000105", "80129" ]
+, [ 4, "geo_8jta-2ef4-2.4", null, null, null, null, null, null, "9", "Expo", "34.02212300000000055888449423946440219879150390625", "-118.27811800000000630461727268993854522705078125", "Jefferson / USC", "80000100", "80124" ]
+, [ 5, "geo_8jta-2ef4-2.5", null, null, null, null, null, null, "3", "Expo", "34.02480299999999857618604437448084354400634765625", "-118.3551590000000004465618985705077648162841796875", "Expo / La Brea", "80000106", "80130" ]
+, [ 6, "geo_8jta-2ef4-2.6", null, null, null, null, null, null, "2", "Expo", "34.02635500000000234877006732858717441558837890625", "-118.372119999999995343387126922607421875", "La Cienega / Jefferson", "80000107", "80131" ]
+, [ 7, "geo_8jta-2ef4-2.7", null, null, null, null, null, null, "8", "Expo", "34.01822700000000310183168039657175540924072265625", "-118.2857340000000050395101425237953662872314453125", "Expo Park / USC", "80000101", "80125" ]
+, [ 8, "geo_8jta-2ef4-2.8", null, null, null, null, null, null, "7", "Expo", "34.01824500000000028876456781290471553802490234375", "-118.29153999999999768988345749676227569580078125", "Expo / Vermont", "80000102", "80126" ]
+, [ 9, "geo_8jta-2ef4-2.9", null, null, null, null, null, null, "6", "Expo", "34.0183310000000034278855309821665287017822265625", "-118.308909999999997353370417840778827667236328125", "Expo / Western", "80000103", "80127" ]
+, [ 10, "geo_8jta-2ef4-2.10", null, null, null, null, null, null, "1", "Expo", "34.02787699999999659894456272013485431671142578125", "-118.3888950000000050977178034372627735137939453125", "Culver City", "80000108", "80132" ]
+, [ 11, "geo_8jta-2ef4-2.11", null, null, null, null, null, null, "11", "Expo", "34.0407349999999979672793415375053882598876953125", "-118.26611800000000584986992180347442626953125", "Pico", "80000021", "80121" ]
+, [ 12, "geo_8jta-2ef4-2.12", null, null, null, null, null, null, "12", "Expo", "34.04860999999999648935045115649700164794921875", "-118.2588219999999950005076243542134761810302734375", "Metro Center", "80000022", "80122" ]
+ ]
+}

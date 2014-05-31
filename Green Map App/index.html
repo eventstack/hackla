@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Flat UI Free</title>
+    <title>Green Map App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Loading Bootstrap -->
@@ -10,6 +10,7 @@
 
     <!-- Loading Flat UI -->
     <link href="css/flat-ui.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
 
     <link rel="shortcut icon" href="images/favicon.ico">
 
@@ -40,10 +41,50 @@
                 </nav><!-- /navbar -->
             </div>
     </div>
-        <div class="map-container" id="map">
-            <div id="search-box"  class=" search-box controls-search">
-                <input id="pac-input"   type="text" placeholder="Search Box">
-                <div style="display: none"id="search-criteria" class="col-xs-12 center">
+        <div class="map-container" id="map" >
+            <div id="search-box" style="padding: 25px;" class=" col-xs-5 search-box controls-search" >
+                <div style="background-color: #FFFFFF; box-shadow: 5px 5px 2px #888888;padding: 20px;" class="row">
+                   <div class="col-xs-12">
+                 <input id="start-address"   type="text" placeholder="Start Address" style="padding: 2px;" class="form-control">
+                <input id="end-address"   type="text" placeholder="End Address" style="padding: 2px;" class="form-control">
+                       <div style="display: none"id="search-criteria" class="col-xs-12 center">
+                           <div class="row" style="background-color:#FFFFFF ">
+                               <div class="col-xs-12">
+                                   <h5 class="demo-panel-title">Modes of Transportation</h5>
+                                   <label class="checkbox" for="evCheckBox">
+                                       <input type="checkbox" value="" id="evCheckBox" name="evCheckBox" data-toggle="checkbox">
+                                       Electric Vehicle
+                                   </label>
+                                   <label class="checkbox" for="trainsCheckBox">
+                                       <input type="checkbox" value="" id="trainsCheckBox" name="evCheckBox" data-toggle="checkbox">
+                                       Metro Rail Lines
+                                   </label>
+                                   <label class="checkbox" for="walkCheckBox">
+                                       <input type="checkbox" value="" id="walkCheckBox" name="evCheckBox" data-toggle="checkbox">
+                                       Walking
+                                   </label>
+                                   <label class="checkbox" for="buxCheckBox">
+                                       <input type="checkbox" value="" id="buxCheckBox" name="evCheckBox" data-toggle="checkbox">
+                                       Metro Bus Lines
+                                   </label>
+                                   <div style="clear: both"></div>
+                                   <table>
+                                       <tr>
+                                           <td class="search-box"><a href="#fakelink" class="btn btn-block btn-lg btn-success" >Route</a></td>
+                                           <td class="search-box"><a href="#fakelink" class="btn btn-block btn-lg btn-info" id="hideButton" >Hide</a></td>
+                                       </tr>
+
+                                   </table>
+
+
+                                   <div style="clear: both"></div>
+                               </div> <!-- /checkboxes col-xs-6 -->
+                           </div>
+
+                       </div>
+
+                   </div>
+
 
 
                 </div>
@@ -64,15 +105,40 @@
     <script src="js/flatui-radio.js"></script>
     <script src="js/jquery.tagsinput.js"></script>
     <script src="js/jquery.placeholder.js"></script>
+    <script src="js/loadStationJSON.js"></script>
     <script src="js/gmaps.js"></script>
         <script>
 
             $ ( document ).ready ( function ( ) {
-
+                loadStationJSON();
                 $("#green-map" ).css("width",$(window).width()*.90);
-                $("#green-map" ).css("height",$(window).height()*.90);
+                $("#green-map" ).css("height",$(window).height()*.80);
                 window.onload = Gmap.loadMapScript;
-                google.maps.event.trigger(map, "resize");
+
+
+                $( window ).resize(function() {
+                    $("#green-map" ).css("width",$(window).width()*.90);
+                    $("#green-map" ).css("height",$(window).height()*.85);
+                    google.maps.event.trigger(map, "resize");
+                });
+                $("#start-address").click(function(){
+
+
+                    $("#search-criteria").show(500);
+
+                });
+                $("#end-address").click(function(){
+
+
+                    $("#search-criteria").show(500);
+
+                });
+                $("#hideButton").click(function(){
+
+
+                    $("#search-criteria").hide(500);
+
+                });
 
             });
 

@@ -8,6 +8,7 @@ Gmap.markers = [];
 Gmap.accessibleLocations=[];
 Gmap.bounds;
 Gmap.infoWindow;
+Gmap.geocoder={};
 var currentLocationLoad=true;
 var bounds;
 
@@ -28,7 +29,7 @@ Gmap.loadMapScript = function() {
 }
 
 Gmap.initialize = function() {
-    console.log("here");
+    Gmap.geocoder = new google.maps.Geocoder();
     Gmap.bounds = new google.maps.LatLngBounds();
 
     var mapOptions = {
@@ -37,7 +38,6 @@ Gmap.initialize = function() {
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     map = new google.maps.Map(document.getElementById("green-map"), mapOptions);
-    console.log("here");
     Gmap.infoWindow = new google.maps.InfoWindow;
     google.maps.event.addListener(map, 'click', function() {
         Gmap.infoWindow.close();
@@ -50,11 +50,41 @@ Gmap.initialize = function() {
     var input = /** @type {HTMLInputElement} */(
         document.getElementById('search-box'));
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+    } else {
+        alert("Geolocation is not supported by this browser.");
+    }
+
 
 
     //refresh map every 5 minutes
 
 
+}
+function geoError() {
+    alert("Geocoder failed.");
+}
+function geoSuccess(position) {
+    var lat = position.coords.latitude;
+    var lng = position.coords.longitude;
+    //alert("lat:" + lat + " lng:" + lng);
+    Gmap.addMarker(position.coords.latitude,position.coords.longitude,"Staring location You are here");
+    var latLng= new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+    map.panTo(latLng);
+    Gmap.geocoder.geocode({'latLng': latLng}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            if (results[1]) {
+                console.log(results[1]);
+                $("#start-address").val(results[1].formatted_address);
+
+            } else {
+                alert('No results found');
+            }
+        } else {
+            alert('Geocoder failed due to: ' + status);
+        }
+    });
 }
 function boundsChanged()
 {
@@ -85,23 +115,9 @@ function doSearch()
 }
 function processSearchResults(locations)
 {
-    Gmap.clearMarkers();
-    Gmap.populateMap(locations);
 
 }
 
-
-function getAccessibleLocations()
-{
-    DriverOps.getAccessibleLocationsForUser(Gmap.setAccessibleLocation) ;
-}
-
-function getLocations (  ) {
-    var center= map.getCenter();
-    // console.log(center)
-    DriverOps.getLocations ( Gmap.populateMap,center.lat(),center.lng(),rad) ;
-    return false ;
-}
 
 
 

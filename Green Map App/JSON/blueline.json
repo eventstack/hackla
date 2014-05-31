@@ -1,0 +1,667 @@
+{
+  "meta" : {
+    "view" : {
+      "id" : "sjen-jhiz",
+      "name" : "BlueLineSta0412",
+      "averageRating" : 0,
+      "createdAt" : 1398804679,
+      "displayType" : "geoRows",
+      "downloadCount" : 0,
+      "indexUpdatedAt" : 1398828097,
+      "newBackend" : false,
+      "numberOfComments" : 0,
+      "oid" : 7878681,
+      "publicationAppendEnabled" : false,
+      "publicationGroup" : 1563378,
+      "publicationStage" : "published",
+      "tableId" : 1563378,
+      "totalTimesRated" : 0,
+      "viewCount" : 0,
+      "viewLastModified" : 1398804680,
+      "viewType" : "tabular",
+      "columns" : [ {
+        "id" : -1,
+        "name" : "sid",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":sid",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "id",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":id",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "position",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":position",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "created_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "created_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "updated_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "updated_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : 145749147,
+        "name" : "LINE",
+        "dataTypeName" : "text",
+        "fieldName" : "line",
+        "position" : 1,
+        "renderTypeName" : "text",
+        "tableColumnId" : 19463195,
+        "cachedContents" : {
+          "non_null" : 22,
+          "smallest" : "Blue",
+          "null" : 0,
+          "largest" : "Blue",
+          "top" : [ {
+            "count" : 20,
+            "item" : "Blue"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749148,
+        "name" : "DIR",
+        "dataTypeName" : "text",
+        "fieldName" : "dir",
+        "position" : 1,
+        "renderTypeName" : "text",
+        "tableColumnId" : 19463196,
+        "cachedContents" : {
+          "non_null" : 22,
+          "smallest" : "",
+          "null" : 0,
+          "largest" : "South",
+          "top" : [ {
+            "count" : 20,
+            "item" : "North"
+          }, {
+            "count" : 19,
+            "item" : ""
+          }, {
+            "count" : 18,
+            "item" : "South"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749149,
+        "name" : "STNSEQ",
+        "dataTypeName" : "number",
+        "fieldName" : "stnseq",
+        "position" : 2,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19463197,
+        "cachedContents" : {
+          "non_null" : 22,
+          "smallest" : "1",
+          "sum" : "253",
+          "null" : 0,
+          "average" : "11.5",
+          "largest" : "22",
+          "top" : [ {
+            "count" : 20,
+            "item" : "22"
+          }, {
+            "count" : 19,
+            "item" : "21"
+          }, {
+            "count" : 18,
+            "item" : "20"
+          }, {
+            "count" : 17,
+            "item" : "19"
+          }, {
+            "count" : 16,
+            "item" : "18"
+          }, {
+            "count" : 15,
+            "item" : "17"
+          }, {
+            "count" : 14,
+            "item" : "16"
+          }, {
+            "count" : 13,
+            "item" : "15"
+          }, {
+            "count" : 12,
+            "item" : "14"
+          }, {
+            "count" : 11,
+            "item" : "13"
+          }, {
+            "count" : 10,
+            "item" : "12"
+          }, {
+            "count" : 9,
+            "item" : "11"
+          }, {
+            "count" : 8,
+            "item" : "10"
+          }, {
+            "count" : 7,
+            "item" : "9"
+          }, {
+            "count" : 6,
+            "item" : "8"
+          }, {
+            "count" : 5,
+            "item" : "7"
+          }, {
+            "count" : 4,
+            "item" : "6"
+          }, {
+            "count" : 3,
+            "item" : "5"
+          }, {
+            "count" : 2,
+            "item" : "4"
+          }, {
+            "count" : 1,
+            "item" : "2"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749150,
+        "name" : "STOPNUM",
+        "dataTypeName" : "number",
+        "fieldName" : "stopnum",
+        "position" : 3,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19463198,
+        "cachedContents" : {
+          "non_null" : 22,
+          "smallest" : "80000001",
+          "sum" : "1760000253",
+          "null" : 0,
+          "average" : "80000011.5",
+          "largest" : "80000022",
+          "top" : [ {
+            "count" : 20,
+            "item" : "80000003"
+          }, {
+            "count" : 19,
+            "item" : "80000001"
+          }, {
+            "count" : 18,
+            "item" : "80000002"
+          }, {
+            "count" : 17,
+            "item" : "80000004"
+          }, {
+            "count" : 16,
+            "item" : "80000005"
+          }, {
+            "count" : 15,
+            "item" : "80000006"
+          }, {
+            "count" : 14,
+            "item" : "80000007"
+          }, {
+            "count" : 13,
+            "item" : "80000008"
+          }, {
+            "count" : 12,
+            "item" : "80000009"
+          }, {
+            "count" : 11,
+            "item" : "80000010"
+          }, {
+            "count" : 10,
+            "item" : "80000011"
+          }, {
+            "count" : 9,
+            "item" : "80000012"
+          }, {
+            "count" : 8,
+            "item" : "80000013"
+          }, {
+            "count" : 7,
+            "item" : "80000014"
+          }, {
+            "count" : 6,
+            "item" : "80000015"
+          }, {
+            "count" : 5,
+            "item" : "80000016"
+          }, {
+            "count" : 4,
+            "item" : "80000017"
+          }, {
+            "count" : 3,
+            "item" : "80000018"
+          }, {
+            "count" : 2,
+            "item" : "80000019"
+          }, {
+            "count" : 1,
+            "item" : "80000021"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749151,
+        "name" : "POINT_X",
+        "dataTypeName" : "number",
+        "fieldName" : "point_x",
+        "position" : 4,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19463199,
+        "cachedContents" : {
+          "non_null" : 22,
+          "smallest" : "-118.2693330000000031532181310467422008514404296875",
+          "sum" : "-2600.9346090000000089048626250587403774261474609375",
+          "null" : 0,
+          "average" : "-118.2243004090909",
+          "largest" : "-118.1893620000000026948328013531863689422607421875",
+          "top" : [ {
+            "count" : 20,
+            "item" : "-118.193700000000006866684998385608196258544921875"
+          }, {
+            "count" : 19,
+            "item" : "-118.1929209999999983438101480714976787567138671875"
+          }, {
+            "count" : 18,
+            "item" : "-118.1893620000000026948328013531863689422607421875"
+          }, {
+            "count" : 17,
+            "item" : "-118.18941200000000435466063208878040313720703125"
+          }, {
+            "count" : 16,
+            "item" : "-118.1893840000000039935912354849278926849365234375"
+          }, {
+            "count" : 15,
+            "item" : "-118.189381999999994832251104526221752166748046875"
+          }, {
+            "count" : 14,
+            "item" : "-118.1898340000000047211869969032704830169677734375"
+          }, {
+            "count" : 13,
+            "item" : "-118.196089999999998099156073294579982757568359375"
+          }, {
+            "count" : 12,
+            "item" : "-118.211016999999998233761289156973361968994140625"
+          }, {
+            "count" : 11,
+            "item" : "-118.2225179999999937763277557678520679473876953125"
+          }, {
+            "count" : 10,
+            "item" : "-118.2242490000000003647073754109442234039306640625"
+          }, {
+            "count" : 9,
+            "item" : "-118.2375550000000004047251422889530658721923828125"
+          }, {
+            "count" : 8,
+            "item" : "-118.2431590000000056761564337648451328277587890625"
+          }, {
+            "count" : 7,
+            "item" : "-118.2432050000000032241587177850306034088134765625"
+          }, {
+            "count" : 6,
+            "item" : "-118.24327099999999290957930497825145721435546875"
+          }, {
+            "count" : 5,
+            "item" : "-118.2433850000000035151970223523676395416259765625"
+          }, {
+            "count" : 4,
+            "item" : "-118.243302999999997382474248297512531280517578125"
+          }, {
+            "count" : 3,
+            "item" : "-118.2430839999999960809873300604522228240966796875"
+          }, {
+            "count" : 2,
+            "item" : "-118.255504999999999427018337883055210113525390625"
+          }, {
+            "count" : 1,
+            "item" : "-118.26611800000000584986992180347442626953125"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749152,
+        "name" : "POINT_Y",
+        "dataTypeName" : "number",
+        "fieldName" : "point_y",
+        "position" : 5,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19463200,
+        "cachedContents" : {
+          "non_null" : 22,
+          "smallest" : "33.76807099999999906003722571767866611480712890625",
+          "sum" : "745.86657599999999490592017536982893943786621093750",
+          "null" : 0,
+          "average" : "33.90302618181818",
+          "largest" : "34.04860999999999648935045115649700164794921875",
+          "top" : [ {
+            "count" : 20,
+            "item" : "33.77225800000000077716322266496717929840087890625"
+          }, {
+            "count" : 19,
+            "item" : "33.76807099999999906003722571767866611480712890625"
+          }, {
+            "count" : 18,
+            "item" : "33.76874000000000108911990537308156490325927734375"
+          }, {
+            "count" : 17,
+            "item" : "33.77359799999999978581399773247539997100830078125"
+          }, {
+            "count" : 16,
+            "item" : "33.7818299999999993588062352500855922698974609375"
+          }, {
+            "count" : 15,
+            "item" : "33.7890900000000016234480426646769046783447265625"
+          }, {
+            "count" : 14,
+            "item" : "33.8070790000000016561898519285023212432861328125"
+          }, {
+            "count" : 13,
+            "item" : "33.81986599999999754118107375688850879669189453125"
+          }, {
+            "count" : 12,
+            "item" : "33.84822199999999980946085997857153415679931640625"
+          }, {
+            "count" : 11,
+            "item" : "33.87607700000000221507434616796672344207763671875"
+          }, {
+            "count" : 10,
+            "item" : "33.89748999999999767851477372460067272186279296875"
+          }, {
+            "count" : 9,
+            "item" : "33.92804799999999687543095205910503864288330078125"
+          }, {
+            "count" : 8,
+            "item" : "33.94221999999999894725988269783556461334228515625"
+          }, {
+            "count" : 7,
+            "item" : "33.95961100000000243426256929524242877960205078125"
+          }, {
+            "count" : 6,
+            "item" : "33.97373999999999938381733954884111881256103515625"
+          }, {
+            "count" : 5,
+            "item" : "33.9887590000000017198544810526072978973388671875"
+          }, {
+            "count" : 4,
+            "item" : "34.0029200000000031423041946254670619964599609375"
+          }, {
+            "count" : 3,
+            "item" : "34.0196499999999986130205797962844371795654296875"
+          }, {
+            "count" : 2,
+            "item" : "34.02680699999999802685124450363218784332275390625"
+          }, {
+            "count" : 1,
+            "item" : "34.0407349999999979672793415375053882598876953125"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749153,
+        "name" : "STATION",
+        "dataTypeName" : "text",
+        "fieldName" : "station",
+        "position" : 6,
+        "renderTypeName" : "text",
+        "tableColumnId" : 19463201,
+        "cachedContents" : {
+          "non_null" : 22,
+          "smallest" : "103rd Street / Watts Towers",
+          "null" : 0,
+          "largest" : "Willowbrook (Rosa Parks)",
+          "top" : [ {
+            "count" : 20,
+            "item" : "Pacific"
+          }, {
+            "count" : 19,
+            "item" : "Long Beach Transit Mall"
+          }, {
+            "count" : 18,
+            "item" : "1st Street"
+          }, {
+            "count" : 17,
+            "item" : "5th Street"
+          }, {
+            "count" : 16,
+            "item" : "Anaheim"
+          }, {
+            "count" : 15,
+            "item" : "PCH"
+          }, {
+            "count" : 14,
+            "item" : "Willow"
+          }, {
+            "count" : 13,
+            "item" : "Wardlow"
+          }, {
+            "count" : 12,
+            "item" : "Del Amo"
+          }, {
+            "count" : 11,
+            "item" : "Artesia"
+          }, {
+            "count" : 10,
+            "item" : "Compton"
+          }, {
+            "count" : 9,
+            "item" : "Willowbrook (Rosa Parks)"
+          }, {
+            "count" : 8,
+            "item" : "103rd Street / Watts Towers"
+          }, {
+            "count" : 7,
+            "item" : "Firestone"
+          }, {
+            "count" : 6,
+            "item" : "Florence"
+          }, {
+            "count" : 5,
+            "item" : "Slauson"
+          }, {
+            "count" : 4,
+            "item" : "Vernon"
+          }, {
+            "count" : 3,
+            "item" : "Washington"
+          }, {
+            "count" : 2,
+            "item" : "San Pedro"
+          }, {
+            "count" : 1,
+            "item" : "Pico"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749154,
+        "name" : "STOPNUMNEW",
+        "dataTypeName" : "number",
+        "fieldName" : "stopnumnew",
+        "position" : 7,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19463202,
+        "cachedContents" : {
+          "non_null" : 22,
+          "smallest" : "80101",
+          "sum" : "1762553",
+          "null" : 0,
+          "average" : "80116.04545454545",
+          "largest" : "80154",
+          "top" : [ {
+            "count" : 20,
+            "item" : "80102"
+          }, {
+            "count" : 19,
+            "item" : "80101"
+          }, {
+            "count" : 18,
+            "item" : "80153"
+          }, {
+            "count" : 17,
+            "item" : "80154"
+          }, {
+            "count" : 16,
+            "item" : "80105"
+          }, {
+            "count" : 15,
+            "item" : "80106"
+          }, {
+            "count" : 14,
+            "item" : "80107"
+          }, {
+            "count" : 13,
+            "item" : "80108"
+          }, {
+            "count" : 12,
+            "item" : "80109"
+          }, {
+            "count" : 11,
+            "item" : "80110"
+          }, {
+            "count" : 10,
+            "item" : "80111"
+          }, {
+            "count" : 9,
+            "item" : "80112"
+          }, {
+            "count" : 8,
+            "item" : "80113"
+          }, {
+            "count" : 7,
+            "item" : "80114"
+          }, {
+            "count" : 6,
+            "item" : "80115"
+          }, {
+            "count" : 5,
+            "item" : "80116"
+          }, {
+            "count" : 4,
+            "item" : "80117"
+          }, {
+            "count" : 3,
+            "item" : "80118"
+          }, {
+            "count" : 2,
+            "item" : "80119"
+          }, {
+            "count" : 1,
+            "item" : "80121"
+          } ]
+        },
+        "format" : {
+        }
+      } ],
+      "grants" : [ {
+        "inherited" : false,
+        "type" : "viewer",
+        "flags" : [ "public" ]
+      } ],
+      "owner" : {
+        "id" : "8b8n-vh2w",
+        "displayName" : "LA DOT OpenData",
+        "profileImageUrlLarge" : "/images/profile/0814/0098/_City_Seal_large.jpg",
+        "profileImageUrlMedium" : "/images/profile/0814/0098/_City_Seal_thumb.jpg",
+        "profileImageUrlSmall" : "/images/profile/0814/0098/_City_Seal_tiny.jpg",
+        "roleName" : "editor",
+        "screenName" : "LA DOT OpenData",
+        "rights" : [ "create_datasets", "edit_others_datasets", "chown_datasets", "view_domain", "create_pages", "view_goals", "view_dashboards" ]
+      },
+      "query" : {
+      },
+      "rights" : [ "read" ],
+      "tableAuthor" : {
+        "id" : "8b8n-vh2w",
+        "displayName" : "LA DOT OpenData",
+        "profileImageUrlLarge" : "/images/profile/0814/0098/_City_Seal_large.jpg",
+        "profileImageUrlMedium" : "/images/profile/0814/0098/_City_Seal_thumb.jpg",
+        "profileImageUrlSmall" : "/images/profile/0814/0098/_City_Seal_tiny.jpg",
+        "roleName" : "editor",
+        "screenName" : "LA DOT OpenData",
+        "rights" : [ "create_datasets", "edit_others_datasets", "chown_datasets", "view_domain", "create_pages", "view_goals", "view_dashboards" ]
+      },
+      "flags" : [ "default" ]
+    }
+  },
+  "data" : [ [ 1, "geo_8jta-2ef4-1.1", null, null, null, null, null, null, "Blue", "North", "22", "80000003", "-118.193700000000006866684998385608196258544921875", "33.77225800000000077716322266496717929840087890625", "Pacific", "80102" ]
+, [ 2, "geo_8jta-2ef4-1.2", null, null, null, null, null, null, "Blue", "", "21", "80000001", "-118.1929209999999983438101480714976787567138671875", "33.76807099999999906003722571767866611480712890625", "Long Beach Transit Mall", "80101" ]
+, [ 3, "geo_8jta-2ef4-1.3", null, null, null, null, null, null, "Blue", "South", "20", "80000002", "-118.1893620000000026948328013531863689422607421875", "33.76874000000000108911990537308156490325927734375", "1st Street", "80153" ]
+, [ 4, "geo_8jta-2ef4-1.4", null, null, null, null, null, null, "Blue", "South", "19", "80000004", "-118.18941200000000435466063208878040313720703125", "33.77359799999999978581399773247539997100830078125", "5th Street", "80154" ]
+, [ 5, "geo_8jta-2ef4-1.5", null, null, null, null, null, null, "Blue", "", "18", "80000005", "-118.1893840000000039935912354849278926849365234375", "33.7818299999999993588062352500855922698974609375", "Anaheim", "80105" ]
+, [ 6, "geo_8jta-2ef4-1.6", null, null, null, null, null, null, "Blue", "", "17", "80000006", "-118.189381999999994832251104526221752166748046875", "33.7890900000000016234480426646769046783447265625", "PCH", "80106" ]
+, [ 7, "geo_8jta-2ef4-1.7", null, null, null, null, null, null, "Blue", "", "16", "80000007", "-118.1898340000000047211869969032704830169677734375", "33.8070790000000016561898519285023212432861328125", "Willow", "80107" ]
+, [ 8, "geo_8jta-2ef4-1.8", null, null, null, null, null, null, "Blue", "", "15", "80000008", "-118.196089999999998099156073294579982757568359375", "33.81986599999999754118107375688850879669189453125", "Wardlow", "80108" ]
+, [ 9, "geo_8jta-2ef4-1.9", null, null, null, null, null, null, "Blue", "", "14", "80000009", "-118.211016999999998233761289156973361968994140625", "33.84822199999999980946085997857153415679931640625", "Del Amo", "80109" ]
+, [ 10, "geo_8jta-2ef4-1.10", null, null, null, null, null, null, "Blue", "", "13", "80000010", "-118.2225179999999937763277557678520679473876953125", "33.87607700000000221507434616796672344207763671875", "Artesia", "80110" ]
+, [ 11, "geo_8jta-2ef4-1.11", null, null, null, null, null, null, "Blue", "", "12", "80000011", "-118.2242490000000003647073754109442234039306640625", "33.89748999999999767851477372460067272186279296875", "Compton", "80111" ]
+, [ 12, "geo_8jta-2ef4-1.12", null, null, null, null, null, null, "Blue", "", "11", "80000012", "-118.2375550000000004047251422889530658721923828125", "33.92804799999999687543095205910503864288330078125", "Willowbrook (Rosa Parks)", "80112" ]
+, [ 13, "geo_8jta-2ef4-1.13", null, null, null, null, null, null, "Blue", "", "10", "80000013", "-118.2431590000000056761564337648451328277587890625", "33.94221999999999894725988269783556461334228515625", "103rd Street / Watts Towers", "80113" ]
+, [ 14, "geo_8jta-2ef4-1.14", null, null, null, null, null, null, "Blue", "", "9", "80000014", "-118.2432050000000032241587177850306034088134765625", "33.95961100000000243426256929524242877960205078125", "Firestone", "80114" ]
+, [ 15, "geo_8jta-2ef4-1.15", null, null, null, null, null, null, "Blue", "", "8", "80000015", "-118.24327099999999290957930497825145721435546875", "33.97373999999999938381733954884111881256103515625", "Florence", "80115" ]
+, [ 16, "geo_8jta-2ef4-1.16", null, null, null, null, null, null, "Blue", "", "7", "80000016", "-118.2433850000000035151970223523676395416259765625", "33.9887590000000017198544810526072978973388671875", "Slauson", "80116" ]
+, [ 17, "geo_8jta-2ef4-1.17", null, null, null, null, null, null, "Blue", "", "6", "80000017", "-118.243302999999997382474248297512531280517578125", "34.0029200000000031423041946254670619964599609375", "Vernon", "80117" ]
+, [ 18, "geo_8jta-2ef4-1.18", null, null, null, null, null, null, "Blue", "", "5", "80000018", "-118.2430839999999960809873300604522228240966796875", "34.0196499999999986130205797962844371795654296875", "Washington", "80118" ]
+, [ 19, "geo_8jta-2ef4-1.19", null, null, null, null, null, null, "Blue", "", "4", "80000019", "-118.255504999999999427018337883055210113525390625", "34.02680699999999802685124450363218784332275390625", "San Pedro", "80119" ]
+, [ 20, "geo_8jta-2ef4-1.20", null, null, null, null, null, null, "Blue", "", "2", "80000021", "-118.26611800000000584986992180347442626953125", "34.0407349999999979672793415375053882598876953125", "Pico", "80121" ]
+, [ 21, "geo_8jta-2ef4-1.21", null, null, null, null, null, null, "Blue", "", "1", "80000022", "-118.2588219999999950005076243542134761810302734375", "34.04860999999999648935045115649700164794921875", "Metro Center", "80122" ]
+, [ 22, "geo_8jta-2ef4-1.22", null, null, null, null, null, null, "Blue", "", "3", "80000020", "-118.2693330000000031532181310467422008514404296875", "34.03315500000000071167960413731634616851806640625", "Grand", "80120" ]
+ ]
+}

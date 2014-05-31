@@ -1,0 +1,660 @@
+{
+  "meta" : {
+    "view" : {
+      "id" : "4xqg-gi29",
+      "name" : "GoldLineSta0412",
+      "averageRating" : 0,
+      "createdAt" : 1398804684,
+      "displayType" : "geoRows",
+      "downloadCount" : 0,
+      "indexUpdatedAt" : 1398828097,
+      "newBackend" : false,
+      "numberOfComments" : 0,
+      "oid" : 7878684,
+      "publicationAppendEnabled" : false,
+      "publicationGroup" : 1563381,
+      "publicationStage" : "published",
+      "tableId" : 1563381,
+      "totalTimesRated" : 0,
+      "viewCount" : 0,
+      "viewLastModified" : 1398804684,
+      "viewType" : "tabular",
+      "columns" : [ {
+        "id" : -1,
+        "name" : "sid",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":sid",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "id",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":id",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "position",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":position",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "created_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "created_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "updated_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "updated_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : 145749163,
+        "name" : "DIR",
+        "dataTypeName" : "text",
+        "fieldName" : "dir",
+        "position" : 1,
+        "renderTypeName" : "text",
+        "tableColumnId" : 19463211,
+        "cachedContents" : {
+          "non_null" : 21,
+          "smallest" : "",
+          "null" : 0,
+          "largest" : "",
+          "top" : [ {
+            "count" : 20,
+            "item" : ""
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749162,
+        "name" : "LINE",
+        "dataTypeName" : "text",
+        "fieldName" : "line",
+        "position" : 1,
+        "renderTypeName" : "text",
+        "tableColumnId" : 19463210,
+        "cachedContents" : {
+          "non_null" : 21,
+          "smallest" : "Gold",
+          "null" : 0,
+          "largest" : "Gold",
+          "top" : [ {
+            "count" : 20,
+            "item" : "Gold"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749164,
+        "name" : "STNSEQ",
+        "dataTypeName" : "number",
+        "fieldName" : "stnseq",
+        "position" : 2,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19463212,
+        "cachedContents" : {
+          "non_null" : 21,
+          "smallest" : "1",
+          "sum" : "231",
+          "null" : 0,
+          "average" : "11",
+          "largest" : "21",
+          "top" : [ {
+            "count" : 20,
+            "item" : "1"
+          }, {
+            "count" : 19,
+            "item" : "2"
+          }, {
+            "count" : 18,
+            "item" : "3"
+          }, {
+            "count" : 17,
+            "item" : "4"
+          }, {
+            "count" : 16,
+            "item" : "5"
+          }, {
+            "count" : 15,
+            "item" : "6"
+          }, {
+            "count" : 14,
+            "item" : "7"
+          }, {
+            "count" : 13,
+            "item" : "8"
+          }, {
+            "count" : 12,
+            "item" : "9"
+          }, {
+            "count" : 11,
+            "item" : "10"
+          }, {
+            "count" : 10,
+            "item" : "11"
+          }, {
+            "count" : 9,
+            "item" : "12"
+          }, {
+            "count" : 8,
+            "item" : "13"
+          }, {
+            "count" : 7,
+            "item" : "14"
+          }, {
+            "count" : 6,
+            "item" : "15"
+          }, {
+            "count" : 5,
+            "item" : "16"
+          }, {
+            "count" : 4,
+            "item" : "17"
+          }, {
+            "count" : 3,
+            "item" : "18"
+          }, {
+            "count" : 2,
+            "item" : "19"
+          }, {
+            "count" : 1,
+            "item" : "20"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749165,
+        "name" : "OLDSTOPNUM",
+        "dataTypeName" : "number",
+        "fieldName" : "oldstopnum",
+        "position" : 3,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19463213,
+        "cachedContents" : {
+          "non_null" : 21,
+          "smallest" : "80000078",
+          "sum" : "1680001848",
+          "null" : 0,
+          "average" : "80000088",
+          "largest" : "80000098",
+          "top" : [ {
+            "count" : 20,
+            "item" : "80000090"
+          }, {
+            "count" : 19,
+            "item" : "80000089"
+          }, {
+            "count" : 18,
+            "item" : "80000088"
+          }, {
+            "count" : 17,
+            "item" : "80000087"
+          }, {
+            "count" : 16,
+            "item" : "80000086"
+          }, {
+            "count" : 15,
+            "item" : "80000085"
+          }, {
+            "count" : 14,
+            "item" : "80000084"
+          }, {
+            "count" : 13,
+            "item" : "80000083"
+          }, {
+            "count" : 12,
+            "item" : "80000082"
+          }, {
+            "count" : 11,
+            "item" : "80000081"
+          }, {
+            "count" : 10,
+            "item" : "80000080"
+          }, {
+            "count" : 9,
+            "item" : "80000079"
+          }, {
+            "count" : 8,
+            "item" : "80000078"
+          }, {
+            "count" : 7,
+            "item" : "80000091"
+          }, {
+            "count" : 6,
+            "item" : "80000092"
+          }, {
+            "count" : 5,
+            "item" : "80000093"
+          }, {
+            "count" : 4,
+            "item" : "80000094"
+          }, {
+            "count" : 3,
+            "item" : "80000095"
+          }, {
+            "count" : 2,
+            "item" : "80000096"
+          }, {
+            "count" : 1,
+            "item" : "80000097"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749166,
+        "name" : "POINT_X",
+        "dataTypeName" : "number",
+        "fieldName" : "point_x",
+        "position" : 4,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19463214,
+        "cachedContents" : {
+          "non_null" : 21,
+          "smallest" : "-118.237900999999993700839695520699024200439453125",
+          "sum" : "-2481.8017939999999867950464249588549137115478515625",
+          "null" : 0,
+          "average" : "-118.1810378095238",
+          "largest" : "-118.08121199999999362262315116822719573974609375",
+          "top" : [ {
+            "count" : 20,
+            "item" : "-118.08121199999999362262315116822719573974609375"
+          }, {
+            "count" : 19,
+            "item" : "-118.11434800000000677755451761186122894287109375"
+          }, {
+            "count" : 18,
+            "item" : "-118.1313899999999961210050969384610652923583984375"
+          }, {
+            "count" : 17,
+            "item" : "-118.14751200000000608270056545734405517578125"
+          }, {
+            "count" : 16,
+            "item" : "-118.14821399999999584906618110835552215576171875"
+          }, {
+            "count" : 15,
+            "item" : "-118.1481260000000048648871597833931446075439453125"
+          }, {
+            "count" : 14,
+            "item" : "-118.1578860000000048557922127656638622283935546875"
+          }, {
+            "count" : 13,
+            "item" : "-118.1926059999999978344931150786578655242919921875"
+          }, {
+            "count" : 12,
+            "item" : "-118.2067119999999960100467433221638202667236328125"
+          }, {
+            "count" : 11,
+            "item" : "-118.2132129999999961000867187976837158203125"
+          }, {
+            "count" : 10,
+            "item" : "-118.220428999999995767211657948791980743408203125"
+          }, {
+            "count" : 9,
+            "item" : "-118.23583999999999605279299430549144744873046875"
+          }, {
+            "count" : 8,
+            "item" : "-118.23475899999999683132045902311801910400390625"
+          }, {
+            "count" : 7,
+            "item" : "-118.237900999999993700839695520699024200439453125"
+          }, {
+            "count" : 6,
+            "item" : "-118.2259399999999942565409583039581775665283203125"
+          }, {
+            "count" : 5,
+            "item" : "-118.219648000000006504706107079982757568359375"
+          }, {
+            "count" : 4,
+            "item" : "-118.210060999999996056430973112583160400390625"
+          }, {
+            "count" : 3,
+            "item" : "-118.192182000000002517481334507465362548828125"
+          }, {
+            "count" : 2,
+            "item" : "-118.168139999999993960955180227756500244140625"
+          }, {
+            "count" : 1,
+            "item" : "-118.1612060000000070658643380738794803619384765625"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749167,
+        "name" : "POINT_Y",
+        "dataTypeName" : "number",
+        "fieldName" : "point_y",
+        "position" : 5,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19463215,
+        "cachedContents" : {
+          "non_null" : 21,
+          "smallest" : "34.03329999999999699866748414933681488037109375",
+          "sum" : "715.81152600000000063573679653927683830261230468750",
+          "null" : 0,
+          "average" : "34.08626314285714",
+          "largest" : "34.1524169999999998026396497152745723724365234375",
+          "top" : [ {
+            "count" : 20,
+            "item" : "34.147751999999996996848494745790958404541015625"
+          }, {
+            "count" : 19,
+            "item" : "34.1524169999999998026396497152745723724365234375"
+          }, {
+            "count" : 18,
+            "item" : "34.15180600000000055160853662528097629547119140625"
+          }, {
+            "count" : 17,
+            "item" : "34.14835599999999971032593748532235622406005859375"
+          }, {
+            "count" : 16,
+            "item" : "34.14191000000000286718204733915627002716064453125"
+          }, {
+            "count" : 15,
+            "item" : "34.133521000000001777152647264301776885986328125"
+          }, {
+            "count" : 14,
+            "item" : "34.11518600000000134286892716772854328155517578125"
+          }, {
+            "count" : 13,
+            "item" : "34.11117899999999991678123478777706623077392578125"
+          }, {
+            "count" : 12,
+            "item" : "34.098242999999996527549228630959987640380859375"
+          }, {
+            "count" : 11,
+            "item" : "34.0872269999999986112015903927385807037353515625"
+          }, {
+            "count" : 10,
+            "item" : "34.08094899999999682904672226868569850921630859375"
+          }, {
+            "count" : 9,
+            "item" : "34.063861000000002832166501320898532867431640625"
+          }, {
+            "count" : 8,
+            "item" : "34.056060999999999694409780204296112060546875"
+          }, {
+            "count" : 7,
+            "item" : "34.0501000000000004774847184307873249053955078125"
+          }, {
+            "count" : 6,
+            "item" : "34.0476340000000021746018319390714168548583984375"
+          }, {
+            "count" : 5,
+            "item" : "34.04721500000000133923094836063683032989501953125"
+          }, {
+            "count" : 4,
+            "item" : "34.04374700000000331101546180434525012969970703125"
+          }, {
+            "count" : 3,
+            "item" : "34.034300000000001773514668457210063934326171875"
+          }, {
+            "count" : 2,
+            "item" : "34.03329999999999699866748414933681488037109375"
+          }, {
+            "count" : 1,
+            "item" : "34.03336399999999883903001318685710430145263671875"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749168,
+        "name" : "STATION",
+        "dataTypeName" : "text",
+        "fieldName" : "station",
+        "position" : 6,
+        "renderTypeName" : "text",
+        "tableColumnId" : 19463216,
+        "cachedContents" : {
+          "non_null" : 21,
+          "smallest" : "Allen",
+          "null" : 0,
+          "largest" : "Union Station",
+          "top" : [ {
+            "count" : 20,
+            "item" : "Sierra Madre Villa"
+          }, {
+            "count" : 19,
+            "item" : "Allen"
+          }, {
+            "count" : 18,
+            "item" : "Lake"
+          }, {
+            "count" : 17,
+            "item" : "Memorial Park"
+          }, {
+            "count" : 16,
+            "item" : "Del Mar"
+          }, {
+            "count" : 15,
+            "item" : "Fillmore"
+          }, {
+            "count" : 14,
+            "item" : "South Pasadena"
+          }, {
+            "count" : 13,
+            "item" : "Highland Park"
+          }, {
+            "count" : 12,
+            "item" : "Southwest Museum"
+          }, {
+            "count" : 11,
+            "item" : "Heritage Square / Arroyo"
+          }, {
+            "count" : 10,
+            "item" : "Lincoln Heights / Cypress Park"
+          }, {
+            "count" : 9,
+            "item" : "Chinatown"
+          }, {
+            "count" : 8,
+            "item" : "Union Station"
+          }, {
+            "count" : 7,
+            "item" : "Little Tokyo / Arts District"
+          }, {
+            "count" : 6,
+            "item" : "Pico / Aliso"
+          }, {
+            "count" : 5,
+            "item" : "Mariachi Plaza / Boyle Heights"
+          }, {
+            "count" : 4,
+            "item" : "Soto"
+          }, {
+            "count" : 3,
+            "item" : "Indiana"
+          }, {
+            "count" : 2,
+            "item" : "Maravilla"
+          }, {
+            "count" : 1,
+            "item" : "East LA Civic Center"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 145749169,
+        "name" : "STOPNUMNEW",
+        "dataTypeName" : "number",
+        "fieldName" : "stopnumnew",
+        "position" : 7,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19463217,
+        "cachedContents" : {
+          "non_null" : 21,
+          "smallest" : "80401",
+          "sum" : "1688631",
+          "null" : 0,
+          "average" : "80411",
+          "largest" : "80421",
+          "top" : [ {
+            "count" : 20,
+            "item" : "80421"
+          }, {
+            "count" : 19,
+            "item" : "80420"
+          }, {
+            "count" : 18,
+            "item" : "80419"
+          }, {
+            "count" : 17,
+            "item" : "80418"
+          }, {
+            "count" : 16,
+            "item" : "80417"
+          }, {
+            "count" : 15,
+            "item" : "80416"
+          }, {
+            "count" : 14,
+            "item" : "80415"
+          }, {
+            "count" : 13,
+            "item" : "80414"
+          }, {
+            "count" : 12,
+            "item" : "80413"
+          }, {
+            "count" : 11,
+            "item" : "80412"
+          }, {
+            "count" : 10,
+            "item" : "80411"
+          }, {
+            "count" : 9,
+            "item" : "80410"
+          }, {
+            "count" : 8,
+            "item" : "80409"
+          }, {
+            "count" : 7,
+            "item" : "80408"
+          }, {
+            "count" : 6,
+            "item" : "80407"
+          }, {
+            "count" : 5,
+            "item" : "80406"
+          }, {
+            "count" : 4,
+            "item" : "80405"
+          }, {
+            "count" : 3,
+            "item" : "80404"
+          }, {
+            "count" : 2,
+            "item" : "80403"
+          }, {
+            "count" : 1,
+            "item" : "80402"
+          } ]
+        },
+        "format" : {
+        }
+      } ],
+      "grants" : [ {
+        "inherited" : false,
+        "type" : "viewer",
+        "flags" : [ "public" ]
+      } ],
+      "owner" : {
+        "id" : "8b8n-vh2w",
+        "displayName" : "LA DOT OpenData",
+        "profileImageUrlLarge" : "/images/profile/0814/0098/_City_Seal_large.jpg",
+        "profileImageUrlMedium" : "/images/profile/0814/0098/_City_Seal_thumb.jpg",
+        "profileImageUrlSmall" : "/images/profile/0814/0098/_City_Seal_tiny.jpg",
+        "roleName" : "editor",
+        "screenName" : "LA DOT OpenData",
+        "rights" : [ "create_datasets", "edit_others_datasets", "chown_datasets", "view_domain", "create_pages", "view_goals", "view_dashboards" ]
+      },
+      "query" : {
+      },
+      "rights" : [ "read" ],
+      "tableAuthor" : {
+        "id" : "8b8n-vh2w",
+        "displayName" : "LA DOT OpenData",
+        "profileImageUrlLarge" : "/images/profile/0814/0098/_City_Seal_large.jpg",
+        "profileImageUrlMedium" : "/images/profile/0814/0098/_City_Seal_thumb.jpg",
+        "profileImageUrlSmall" : "/images/profile/0814/0098/_City_Seal_tiny.jpg",
+        "roleName" : "editor",
+        "screenName" : "LA DOT OpenData",
+        "rights" : [ "create_datasets", "edit_others_datasets", "chown_datasets", "view_domain", "create_pages", "view_goals", "view_dashboards" ]
+      },
+      "flags" : [ "default" ]
+    }
+  },
+  "data" : [ [ 1, "geo_8jta-2ef4-3.1", null, null, null, null, null, null, "", "Gold", "1", "80000090", "-118.08121199999999362262315116822719573974609375", "34.147751999999996996848494745790958404541015625", "Sierra Madre Villa", "80421" ]
+, [ 2, "geo_8jta-2ef4-3.2", null, null, null, null, null, null, "", "Gold", "2", "80000089", "-118.11434800000000677755451761186122894287109375", "34.1524169999999998026396497152745723724365234375", "Allen", "80420" ]
+, [ 3, "geo_8jta-2ef4-3.3", null, null, null, null, null, null, "", "Gold", "3", "80000088", "-118.1313899999999961210050969384610652923583984375", "34.15180600000000055160853662528097629547119140625", "Lake", "80419" ]
+, [ 4, "geo_8jta-2ef4-3.4", null, null, null, null, null, null, "", "Gold", "4", "80000087", "-118.14751200000000608270056545734405517578125", "34.14835599999999971032593748532235622406005859375", "Memorial Park", "80418" ]
+, [ 5, "geo_8jta-2ef4-3.5", null, null, null, null, null, null, "", "Gold", "5", "80000086", "-118.14821399999999584906618110835552215576171875", "34.14191000000000286718204733915627002716064453125", "Del Mar", "80417" ]
+, [ 6, "geo_8jta-2ef4-3.6", null, null, null, null, null, null, "", "Gold", "6", "80000085", "-118.1481260000000048648871597833931446075439453125", "34.133521000000001777152647264301776885986328125", "Fillmore", "80416" ]
+, [ 7, "geo_8jta-2ef4-3.7", null, null, null, null, null, null, "", "Gold", "7", "80000084", "-118.1578860000000048557922127656638622283935546875", "34.11518600000000134286892716772854328155517578125", "South Pasadena", "80415" ]
+, [ 8, "geo_8jta-2ef4-3.8", null, null, null, null, null, null, "", "Gold", "8", "80000083", "-118.1926059999999978344931150786578655242919921875", "34.11117899999999991678123478777706623077392578125", "Highland Park", "80414" ]
+, [ 9, "geo_8jta-2ef4-3.9", null, null, null, null, null, null, "", "Gold", "9", "80000082", "-118.2067119999999960100467433221638202667236328125", "34.098242999999996527549228630959987640380859375", "Southwest Museum", "80413" ]
+, [ 10, "geo_8jta-2ef4-3.10", null, null, null, null, null, null, "", "Gold", "10", "80000081", "-118.2132129999999961000867187976837158203125", "34.0872269999999986112015903927385807037353515625", "Heritage Square / Arroyo", "80412" ]
+, [ 11, "geo_8jta-2ef4-3.11", null, null, null, null, null, null, "", "Gold", "11", "80000080", "-118.220428999999995767211657948791980743408203125", "34.08094899999999682904672226868569850921630859375", "Lincoln Heights / Cypress Park", "80411" ]
+, [ 12, "geo_8jta-2ef4-3.12", null, null, null, null, null, null, "", "Gold", "12", "80000079", "-118.23583999999999605279299430549144744873046875", "34.063861000000002832166501320898532867431640625", "Chinatown", "80410" ]
+, [ 13, "geo_8jta-2ef4-3.13", null, null, null, null, null, null, "", "Gold", "13", "80000078", "-118.23475899999999683132045902311801910400390625", "34.056060999999999694409780204296112060546875", "Union Station", "80409" ]
+, [ 14, "geo_8jta-2ef4-3.14", null, null, null, null, null, null, "", "Gold", "14", "80000091", "-118.237900999999993700839695520699024200439453125", "34.0501000000000004774847184307873249053955078125", "Little Tokyo / Arts District", "80408" ]
+, [ 15, "geo_8jta-2ef4-3.15", null, null, null, null, null, null, "", "Gold", "15", "80000092", "-118.2259399999999942565409583039581775665283203125", "34.0476340000000021746018319390714168548583984375", "Pico / Aliso", "80407" ]
+, [ 16, "geo_8jta-2ef4-3.16", null, null, null, null, null, null, "", "Gold", "16", "80000093", "-118.219648000000006504706107079982757568359375", "34.04721500000000133923094836063683032989501953125", "Mariachi Plaza / Boyle Heights", "80406" ]
+, [ 17, "geo_8jta-2ef4-3.17", null, null, null, null, null, null, "", "Gold", "17", "80000094", "-118.210060999999996056430973112583160400390625", "34.04374700000000331101546180434525012969970703125", "Soto", "80405" ]
+, [ 18, "geo_8jta-2ef4-3.18", null, null, null, null, null, null, "", "Gold", "18", "80000095", "-118.192182000000002517481334507465362548828125", "34.034300000000001773514668457210063934326171875", "Indiana", "80404" ]
+, [ 19, "geo_8jta-2ef4-3.19", null, null, null, null, null, null, "", "Gold", "19", "80000096", "-118.168139999999993960955180227756500244140625", "34.03329999999999699866748414933681488037109375", "Maravilla", "80403" ]
+, [ 20, "geo_8jta-2ef4-3.20", null, null, null, null, null, null, "", "Gold", "20", "80000097", "-118.1612060000000070658643380738794803619384765625", "34.03336399999999883903001318685710430145263671875", "East LA Civic Center", "80402" ]
+, [ 21, "geo_8jta-2ef4-3.21", null, null, null, null, null, null, "", "Gold", "21", "80000098", "-118.15446900000000596264726482331752777099609375", "34.03339799999999826241037226282060146331787109375", "Atlantic", "80401" ]
+ ]
+}
