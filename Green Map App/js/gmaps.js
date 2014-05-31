@@ -15,6 +15,8 @@ var currentLocationLoad=true;
 var bounds;
 
 var rad = 0;
+var emissions = 0;
+var dist_in_miles = 0;
 
 
 var boundsListener;
@@ -88,13 +90,13 @@ Gmap.calcRouter=function () {
 
         var direction_results_leg1= [];
 
-        var direction_results_leg2=[];
+
         var min_leg1_pair=null;
 
         chargeStationData.locations.forEach(function(chargeStation) {
-            console.log(chargeStation);
+           // console.log(chargeStation);
             var chargeStationAddress = chargeStation.address + " " + chargeStation.zipcode;
-            console.log(chargeStationAddress);
+            //console.log(chargeStationAddress);
 
                 //drawRoute(start,chargeStationAddress,"car");
                 // find distance from origin to each of the charge stations
@@ -102,8 +104,8 @@ Gmap.calcRouter=function () {
                 processedItemsDeffered.push(dfdDrivingDirections.promise());
 
                 getDrivingDirections(start, chargeStationAddress, function(result) {
-                    console.log("got directions to charging station " + chargeStationAddress);
-                    console.log(result.routes[0].legs[0].distance.text);
+                   // console.log("got directions to charging station " + chargeStationAddress);
+                   // console.log(result.routes[0].legs[0].distance.text);
                     var station_distance_pair={};
                     station_distance_pair.start=start;
                     station_distance_pair.end=chargeStationAddress;
@@ -120,7 +122,7 @@ Gmap.calcRouter=function () {
         });
 
         $.when.apply($,processedItemsDeffered).then(function(){
-            console.log("then is called" + direction_results_leg1.length +" length "+direction_results_leg2.length);
+            //console.log("then is called" + direction_results_leg1.length +" length "+direction_results_leg2.length);
             direction_results_leg1.forEach(function(pair){
 
                 if(min_leg1_pair==null)
@@ -135,17 +137,17 @@ Gmap.calcRouter=function () {
 
             }) ;
             //console.log(start, min_leg1_pair.)
-            drawRoute(min_leg1_pair.start,min_leg1_pair.end,"car");
+            drawRoute(min_leg1_pair.start,min_leg1_pair.end,"car",min_leg1_pair.distance);
 
             getTransitDirections(min_leg1_pair.end, end, function(transitResult) {
-                console.log("got directions from charge " + min_leg1_pair.end + " to " + end);
-                console.log(transitResult.routes[0].legs[0].distance.text);
+                //console.log("got directions from charge " + min_leg1_pair.end + " to " + end);
+                //console.log(transitResult.routes[0].legs[0].distance.text);
                 var station_distance_pair={};
                 station_distance_pair.start=min_leg1_pair.end;
                 station_distance_pair.end=end;
                 station_distance_pair.distance=transitResult.routes[0].legs[0].distance.value;
-                console.log("transit "+station_distance_pair.distance);
-                drawRoute(min_leg1_pair.end,end,"transit");
+                //console.log("transit "+station_distance_pair.distance);
+                drawRoute(min_leg1_pair.end,end,"transit",station_distance_pair.distance);
             });
 
 
@@ -163,16 +165,23 @@ Gmap.calcRouter=function () {
 
 function renderDirections(result) {
     var directionsRenderer = new google.maps.DirectionsRenderer();
-    renderingList.push(directionsRenderer);
     directionsRenderer.setMap(map);
     directionsRenderer.setDirections(result);
+
 }
 
-function drawRoute(start,end, mode)
+
+function drawRoute(start,end, mode,distance)
 {
     console.log("start"+start+" end "+end+" mode "+mode);
 
+
+
     if(mode=="car") {
+        dist_in_miles+= distance*0.000621371;
+        //console.log("miles "+ dist_in_miles ) ;
+        emissions+=calculateEmissionsForCar( dist_in_miles);
+        $("#savingsText").text("Estimated Green House Gas Savings(kg of CO2):"+emissions.toFixed(2));
         directionsService.route({
             origin: start,
             destination: end,
@@ -184,6 +193,11 @@ function drawRoute(start,end, mode)
     }
     else if(mode=="transit")
     {
+        dist_in_miles+= distance*0.000621371;
+        //console.log("miles "+ dist_in_miles) ;
+        emissions+=calculateEmissionsForCar( dist_in_miles);
+        emissions-=calculateEmissionsForCommuterTrain( dist_in_miles);
+        $("#savingsText").text("Estimated Green House Gas Savings(kg of CO2):"+emissions.toFixed(2));
         directionsService.route({
             origin: start,
             destination: end,
