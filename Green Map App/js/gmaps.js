@@ -20,6 +20,7 @@ var firstLegs = [];
 var secondLegs = [];
 var directionsDisplay;
 var directionsDisplay2;
+var allowedToSendReqest=true;
 
 
 Gmap.loadMapScript = function() {
@@ -83,6 +84,14 @@ function resetVars()
      directionsDisplay2;
 }
 Gmap.calcRouter=function () {
+
+    setTimeout(function(){
+        $("#waitButton").hide(500) ;
+        $("#routeButton").show(500)
+
+    }, 8000);
+    $("#routeButton").hide(500) ;
+    $("#waitButton").show(500) ;
     try {
         resetVars();
         directionsDisplay.setMap();
@@ -192,22 +201,24 @@ function mapRoutes2() {
 
         var firstLegMiles= getResultDistance(firstLegs[minIndex])*0.000621371;
         var secondLegMiles=getResultDistance(secondLegs[minIndex])*0.000621371;
-        var emissions =0;
+
         var carEmissions=calculateEmissionsForCar((firstLegMiles+secondLegMiles));
         console.log("first leg ="+ firstLegMiles);
         console.log("second leg ="+ secondLegMiles);
         console.log("car ="+ carEmissions);
 
-
-        if(!$('#evCheckBox').is(':checked') ) {
-            emissions += calculateEmissionsForCar(firstLegMiles);
+        var emissionsSaved =0;
+        if($('#evCheckBox').is(':checked') ) {
+            emissionsSaved += calculateEmissionsForCar(firstLegMiles);
             console.log("ev saved ="+ emissions);
         }
+        var carSecondLeg=calculateEmissionsForCar(secondLegMiles);
+        var lightRailSecondLeg=calculateEmissionsForLightRail(secondLegMiles);
 
-        emissions+=calculateEmissionsForLightRail(secondLegMiles);
-        console.log("train saved ="+ emissions);
+        emissionsSaved+=carSecondLeg.toFixed(4)-lightRailSecondLeg.toFixed(4);
+        console.log(emissionsSaved);
 
-        $("#savingsText").text("Estimated Green House Gas Savings(kg of CO2):"+(carEmissions-emissions).toFixed(2));
+        $("#savingsText").text("Estimated Green House Gas Savings(kg of CO2):"+(emissionsSaved).toFixed(2));
 
     }
 }
