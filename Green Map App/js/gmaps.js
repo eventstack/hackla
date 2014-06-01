@@ -85,8 +85,9 @@ function resetVars()
 Gmap.calcRouter=function () {
     try {
         resetVars();
-        directionsDisplay.setMap(null);
-        directionsDisplay2.setMap(null);
+        directionsDisplay.setMap();
+        directionsDisplay2.setMap();
+        console.log("here");
     }
     catch(e)
     {
@@ -192,11 +193,21 @@ function mapRoutes2() {
         var firstLegMiles= getResultDistance(firstLegs[minIndex])*0.000621371;
         var secondLegMiles=getResultDistance(secondLegs[minIndex])*0.000621371;
         var emissions =0;
-        if($('#evCheckBox').is(':checked') ) {
+        var carEmissions=calculateEmissionsForCar((firstLegMiles+secondLegMiles));
+        console.log("first leg ="+ firstLegMiles);
+        console.log("second leg ="+ secondLegMiles);
+        console.log("car ="+ carEmissions);
+
+
+        if(!$('#evCheckBox').is(':checked') ) {
             emissions += calculateEmissionsForCar(firstLegMiles);
+            console.log("ev saved ="+ emissions);
         }
+
         emissions+=calculateEmissionsForLightRail(secondLegMiles);
-        $("#savingsText").text("Estimated Green House Gas Savings(kg of CO2):"+emissions.toFixed(2));
+        console.log("train saved ="+ emissions);
+
+        $("#savingsText").text("Estimated Green House Gas Savings(kg of CO2):"+(carEmissions-emissions).toFixed(2));
 
     }
 }
