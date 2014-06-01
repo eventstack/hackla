@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div id="map-canvas" id="map" style="background-color: #f00;width:500px;height:500px;">
+</div>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAlreV0EeC9Li1d-EEN0dEVPXey8bNSDw&sensor=FALSE" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/json2/20130526/json2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+<script src="https://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha256.js"></script>
+<script src="https://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-base64-min.js"></script>
+<script src="js/evcloud-api-core-3_0.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+var map;
+var locations = [];
+var stationIndex = 0;
+var secondLegIndex = 0;
+var originAddress = "13320 Beach Ave 90292";
+var destAddress = "Dodger Stadium";
+var firstLegs = [];
+var secondLegs = [];
+function initializeMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(-34.397, 150.644),
+        zoom: 8
+    };
+    map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+}
+
+$ ( document ).ready ( function ( ) {
+    console.log("doc loaded");
+    initializeMap();
+
+    getEvcLocations(function(chargeStationData) {
+        console.log(chargeStationData);
+        locations = chargeStationData.locations;
+        stationIndex = 0;
+
+        routeNext();
+    });
+
+});
+
+function routeComparator(a,b) {
+    return getResultDistance(a) - getResultDistance(b);
+}
+
+function routeNext() {
+    var location = locations[stationIndex];
+    var chargeStationAddress = location.address + " " + location.zipcode;
+    console.log(chargeStationAddress);
+    getDrivingDirections(originAddress, chargeStationAddress, function(result) {
+        console.log("got directions to charging station " + chargeStationAddress);
+        console.log(result.routes[0].legs[0].distance.text);
+
+        firstLegs.push(result);
+        stationIndex++;
+
+        if (stationIndex >= locations.length) {
+            console.log("number of firstLegs=" + firstLegs.length);
+
+            // sort by distance of first leg
+            firstLegs.sort(routeComparator);
+
+            firstLegs.forEach(function(firstLeg) {
+                console.log("dist=" + getResultDistance(firstLeg));
+            });
+
+            routeSecondLeg();
+        } else {
+            routeNext();
+        }
+    });
+}
+
+function routeSecondLeg() {
+    console.log("routing second leg");
+
+    var secondLegOrigin = firstLegs[secondLegIndex];
+    var secondLegOriginAddress = secondLegOrigin.routes[0].legs[0].end_address;
+    console.log(secondLegOriginAddress);
+    getTransitDirections(secondLegOriginAddress, destAddress, function(result) {
+        console.log("second leg from " + secondLegOriginAddress);
+
+        if (result != null) {
+            console.log(result.routes[0].legs[0].distance.text);
+            secondLegs.push(result);
+        } else {
+            secondLegs.push({});
+        }
+        secondLegIndex++;
+
+        if (secondLegIndex >= firstLegs.length) {
+            mapRoutes2();
+        } else {
+            routeSecondLeg();
+        }
+    });
+}
+
+function mapRoutes2() {
+    console.log("maproutes2");
+
+    var minDist = 999999;
+    var minIndex = -1;
+    var i;
+    for (i = 0;i<firstLegs.length;i++) {
+        if (isValidDirectionResult(firstLegs[i]) && isValidDirectionResult(secondLegs[i])) {
+            console.log("dist leg1=" + getResultDistance(firstLegs[i]) + " leg2=" + getResultDistance(secondLegs[i]));
+
+            var dist = getResultDistance(firstLegs[i]) + getResultDistance(secondLegs[i]);
+            if (dist < minDist) {
+                minDist = dist;
+                minIndex = i;
+            }
+        }
+    }
+
+    if (minIndex != -1) {
+        var directionsDisplay = new google.maps.DirectionsRenderer();
+        directionsDisplay.setMap(map);
+        directionsDisplay.setDirections(firstLegs[minIndex]);
+
+        var directionsDisplay2 = new google.maps.DirectionsRenderer();
+        directionsDisplay2.setMap(map);
+        directionsDisplay2.setDirections(secondLegs[minIndex]);
+    }
+}
+
+function isValidDirectionResult(result) {
+    return result != null && result.routes != null && result.routes.length > 0 && result.routes[0].legs != null && result.routes[0].legs.length > 0;
+}
+
+function getResultDistance(result) {
+    return result.routes[0].legs[0].distance.value;
+}
+
+
+</script>
+</body>
+</html>

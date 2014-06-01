@@ -67,9 +67,12 @@
                 travelMode: google.maps.TravelMode.TRANSIT
             };
             directionsService.route(request, function(result, status) {
+                console.log(status);
                 if (status == google.maps.DirectionsStatus.OK) {
                     console.log(result);
                     callback(result);
+                } else {
+                    callback(null);
                 }
             });
         }
