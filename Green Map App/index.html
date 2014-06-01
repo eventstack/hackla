@@ -177,29 +177,7 @@
                     var destAddress = $(event.currentTarget).find("#end-address").val();
 
 
-                    getEvcLocations(function(chargeStationData) {
-                        console.log(chargeStationData);
 
-                        chargeStationData.locations.forEach(function(chargeStation) {
-                            console.log(chargeStation);
-                            var chargeStationAddress = chargeStation.address + " " + chargeStation.zipcode;
-                            console.log(chargeStationAddress);
-                            geocodeWithCallback(originAddress, function(coords) {
-                                console.log(coords);
-
-                                // find distance from origin to each of the charge stations
-                                getDrivingDirections(originAddress, chargeStationAddress, function(result) {
-                                    console.log("got directions to charging station " + chargeStationAddress);
-                                    console.log(result.routes[0].legs[0].distance.text);
-
-                                    getTransitDirections(chargeStationAddress, destAddress, function(transitResult) {
-                                        console.log("got directions from " + chargeStationAddress + " to " + destAddress);
-                                        console.log(transitResult.routes[0].legs[0].distance.text);
-                                    });
-                                });
-                            });
-                        });
-                    });
 
                 });
 

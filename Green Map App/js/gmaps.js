@@ -3,25 +3,24 @@
  */
 var Gmap = {};
 Gmap.initialized = false;
+Gmap.markers= [];
 var map = null;
-Gmap.markers = [];
-Gmap.accessibleLocations=[];
-Gmap.bounds;
-Gmap.infoWindow;
-Gmap.geocoder={};
-var currentLocationLoad=true;
 
-var bounds;
+Gmap.geocoder={};
 
 var rad = 0;
 var emissions = 0;
 var dist_in_miles = 0;
+var locations = [];
+var stationIndex = 0;
+var secondLegIndex = 0;
+var originAddress = "13320 Beach Ave 90292";
+var destAddress = "Dodger Stadium";
+var firstLegs = [];
+var secondLegs = [];
+var directionsDisplay;
+var directionsDisplay2;
 
-
-var boundsListener;
-var search = false;
-var timeout;
-var renderingList = [];
 
 Gmap.loadMapScript = function() {
 
@@ -73,143 +72,125 @@ var min_leg1_pair = null;
 var chargeStationData= {};
 var directionsService;
 Gmap.calcRouter=function () {
-    var start = document.getElementById("start-address").value;
-    var end = document.getElementById("end-address").value;
+   originAddress = document.getElementById("start-address").value;
+   destAddress = document.getElementById("end-address").value;
     Gmap.directionsService= new google.maps.DirectionsService();
 
-    getEvcLocations(function (tempchargeStationData) {
-            chargeStationData=tempchargeStationData.locations;
+    getEvcLocations(function(chargeStationData) {
+        console.log(chargeStationData);
+        locations = chargeStationData.locations;
+        stationIndex = 0;
 
-           leg1(chargeStationData[i]);
-
+        routeNext();
     });
 }
-     function leg1(chargeStation)
-     {
-         console.log(chargeStation);
-         var start = document.getElementById("start-address").value;
-         var end = document.getElementById("end-address").value;
-         var chargeStationAddress = chargeStation.address + " " + chargeStation.zipcode;
-         getDrivingDirections(start, chargeStationAddress, function (result) {
-               console.log("recur "+ i+" "+chargeStationData)
-              ++i;
-             // console.log("got directions to charging station " + chargeStationAddress);
-             // console.log(result.routes[0].legs[0].distance.text);
-             var station_distance_pair = {};
-             station_distance_pair.start = start;
-             station_distance_pair.end = chargeStationAddress;
-             station_distance_pair.distance = result.routes[0].legs[0].distance.value;
-             direction_results_leg1.push(station_distance_pair);
-             console.log("i="+i + " "+chargeStationData.length);
-             if (i <= chargeStationData.length- 1) {
-                 leg1(chargeStationData[i]);
-             }
-             else
-             {
-                 leg2();
-                 console.log("here");
-
-             }
-
-            return false;
-             //drawRoute(chargeStationAddress,end,"transit");
-
-         });
-     }
-
-    function leg2()
-    {
-        var start = document.getElementById("start-address").value;
-        var end = document.getElementById("end-address").value;
-
-        direction_results_leg1.forEach(function(pair){
-            console.log("dist "+pair.distance);
-            if(min_leg1_pair==null)
-            {
-                min_leg1_pair=pair;
-            }
-            else if( min_leg1_pair.distance>pair.distance)
-            {
-                min_leg1_pair=pair;
-            }
-
-
-        }) ;
-        console.log("min dist "+ min_leg1_pair.distance);
-
-        drawRoute(start,min_leg1_pair.end,"car",min_leg1_pair.distance);
-       /* getTransitDirections(min_leg1_pair.end, end, function(transitResult) {
-            //console.log("got directions from charge " + min_leg1_pair.end + " to " + end);
-            //console.log(transitResult.routes[0].legs[0].distance.text);
-            var station_distance_pair={};
-            station_distance_pair.start=min_leg1_pair.end;
-            station_distance_pair.end=end;
-            station_distance_pair.distance=transitResult.routes[0].legs[0].distance.value;
-            //console.log("transit "+station_distance_pair.distance);
-            //drawRoute(min_leg1_pair.end,end,"transit",station_distance_pair.distance);
-        });*/
-    }
-
-
-
-
-function renderDirections(result) {
-
-    var rendererOptions = {
-        preserveViewport: false,
-        suppressMarkers:false,
-        routeIndex:i
-    };
-    var directionsRenderer = new google.maps.DirectionsRenderer(rendererOptions);
-    directionsRenderer.setMap(map);
-    directionsRenderer.setDirections(result);
-
-
+function routeComparator(a,b) {
+    return getResultDistance(a) - getResultDistance(b);
 }
 
+function routeNext() {
+    var location = locations[stationIndex];
+    var chargeStationAddress = location.address + " " + location.zipcode;
+    console.log(chargeStationAddress);
+    getDrivingDirections(originAddress, chargeStationAddress, function(result) {
+        console.log("got directions to charging station " + chargeStationAddress);
+        console.log(result.routes[0].legs[0].distance.text);
 
-function drawRoute(start,end, mode,distance)
-{
-    console.log("start"+start+" end "+end+" mode "+mode);
+        firstLegs.push(result);
+        stationIndex++;
 
-    if(mode=="car") {
-        dist_in_miles+= distance*0.000621371;
-        //console.log("miles "+ dist_in_miles ) ;
+        if (stationIndex >= locations.length) {
+            console.log("number of firstLegs=" + firstLegs.length);
 
-        if($('#evCheckBox').is(':checked') ) {
-            emissions += calculateEmissionsForCar(dist_in_miles);
+            // sort by distance of first leg
+            firstLegs.sort(routeComparator);
+
+            firstLegs.forEach(function(firstLeg) {
+                console.log("dist=" + getResultDistance(firstLeg));
+            });
+
+            routeSecondLeg();
+        } else {
+            routeNext();
         }
-        $("#savingsText").text("Estimated Green House Gas Savings(kg of CO2):"+emissions.toFixed(2));
-        var directionsService = new google.maps.DirectionsService();
-        directionsService.route({
-            origin: start,
-            destination: end,
-            travelMode: google.maps.DirectionsTravelMode.DRIVING
-        }, function(result) {
-            renderDirections(result);
-
-        });
-    }
-    else if(mode=="transit")
-    {
-        dist_in_miles+= distance*0.000621371;
-        //console.log("miles "+ dist_in_miles) ;
-        emissions+=calculateEmissionsForCar( dist_in_miles);
-        emissions-=calculateEmissionsForCommuterTrain( dist_in_miles);
-        $("#savingsText").text("Estimated Green House Gas Savings(kg of CO2):"+emissions.toFixed(2));
-        var directionsService = new google.maps.DirectionsService();
-        directionsService.route({
-            origin: start,
-            destination: end,
-            travelMode: google.maps.DirectionsTravelMode.TRANSIT
-        }, function(result) {
-            renderDirections(result);
-
-        });
-    }
-    return false;
-
+    });
 }
+
+function routeSecondLeg() {
+    console.log("routing second leg");
+
+    var secondLegOrigin = firstLegs[secondLegIndex];
+    var secondLegOriginAddress = secondLegOrigin.routes[0].legs[0].end_address;
+    console.log(secondLegOriginAddress);
+    getTransitDirections(secondLegOriginAddress, destAddress, function(result) {
+        console.log("second leg from " + secondLegOriginAddress);
+
+        if (result != null) {
+            console.log(result.routes[0].legs[0].distance.text);
+            secondLegs.push(result);
+        } else {
+            secondLegs.push({});
+        }
+        secondLegIndex++;
+
+        if (secondLegIndex >= firstLegs.length) {
+            mapRoutes2();
+        } else {
+            routeSecondLeg();
+        }
+    });
+}
+
+function mapRoutes2() {
+    console.log("maproutes2");
+
+    var minDist = 999999;
+    var minIndex = -1;
+    var i;
+    for (i = 0;i<firstLegs.length;i++) {
+        if (isValidDirectionResult(firstLegs[i]) && isValidDirectionResult(secondLegs[i])) {
+            console.log("dist leg1=" + getResultDistance(firstLegs[i]) + " leg2=" + getResultDistance(secondLegs[i]));
+
+            var dist = getResultDistance(firstLegs[i]) + getResultDistance(secondLegs[i]);
+            if (dist < minDist) {
+                minDist = dist;
+                minIndex = i;
+            }
+        }
+    }
+
+    if (minIndex != -1) {
+
+        directionsDisplay = new google.maps.DirectionsRenderer();
+        directionsDisplay.setMap(map);
+        directionsDisplay.setDirections(firstLegs[minIndex]);
+
+        directionsDisplay2 = new google.maps.DirectionsRenderer();
+        directionsDisplay2.setMap(map);
+        directionsDisplay2.setDirections(secondLegs[minIndex]);
+
+        var firstLegMiles= getResultDistance(firstLegs[minIndex])*0.000621371;
+        var secondLegMiles=getResultDistance(secondLegs[minIndex])*0.000621371;
+        var emissions =0;
+        if($('#evCheckBox').is(':checked') ) {
+            emissions += calculateEmissionsForCar(firstLegMiles);
+        }
+        emissions+=calculateEmissionsForLightRail(secondLegMiles);
+        $("#savingsText").text("Estimated Green House Gas Savings(kg of CO2):"+emissions.toFixed(2));
+        console.log(firstLegMiles+" "+secondLegMiles);
+    }
+}
+
+
+function isValidDirectionResult(result) {
+    return result != null && result.routes != null && result.routes.length > 0 && result.routes[0].legs != null && result.routes[0].legs.length > 0;
+}
+
+function getResultDistance(result) {
+    return result.routes[0].legs[0].distance.value;
+}
+
+
 function geoError() {
     alert("Geocoder failed.");
 }
@@ -244,27 +225,6 @@ function boundsChanged()
 
 
 
-
-function clearSearch()
-{
-    $("#search-criteria").slideUp(500);
-    getAccessibleLocations();
-    //refresh map every 5 minutes
-    timeout = setTimeout(getAccessibleLocations, 300000);
-    $("#pac-input").val('');
-    boundsListener =google.maps.event.addListener(map, 'idle', function() {
-        boundsChanged()
-    });
-    search=false;
-}
-function doSearch()
-{
-
-}
-function processSearchResults(locations)
-{
-
-}
 
 
 
@@ -301,106 +261,6 @@ Gmap.addMarker = function(latitude, longitude, infoContent) {
     //map.fitBounds(Gmap.bounds);
     return Gmap.markers.length - 1;
 }
-Gmap.populateMap = function( locations) {
-    for ( var i = 0 ; i < locations.length ; ++ i ) {
-
-        var location = locations[ i ] ;
-
-        Gmap.addLocation( location ) ;
-
-    }
-    // console.log(Gmap.accessibleLocations);
-    if(currentLocationLoad)
-    {
-        // console.log("in location load view")
-
-    }
-    return false ;
-}
-
-Gmap.setShowLocationPane = function(locationData)
-{
-    // $("#location-view").slide
-}
-
-Gmap.setAccessibleLocation = function(locations)
-{
-    // console.log(locations);
-    Gmap.accessibleLocations=locations;
-    getLocations();
-
-}
-Gmap.addLocation = function(location) {
-    //console.log("adding marker @ " + location.latitude + ", " + location.longitude);
-    var latlng = new google.maps.LatLng(location.latitude, location.longitude);
-    var icon;
-    if(Gmap.accessibleLocations.indexOf(location.id)>-1)
-    {
-
-        if(location.availableStationCount>0)
-            icon ='/assets/images/available-location-marker.png'
-        else
-            icon ='/assets/images/in-use-location-marker.png'
-    }
-    else
-    {
-        icon ='/assets/images/unavailable-location-marker.png'
-    }
-
-    var marker = new google.maps.Marker({
-        position: latlng,
-        map: map,
-        meta: location.name ,
-        icon:icon,
-        id:location.id
-    });
-    var onMarkerClick = function() {
-        var marker = this;
-        var latLng = marker.getPosition();
-        Gmap.infoWindow.setContent(marker.meta);
-        Gmap.infoWindow.open(map, marker);
-
-        $("#station-map" ).css("width", $("#location-pane").width());
-        $("#station-map" ).css("height", $("#location-pane").height());
-        google.maps.event.trigger(map, 'resize');
-
-        var isPrivate = "true";
-
-        //enables pout of network view for location
-        if(Gmap.accessibleLocations.indexOf(location.id)>-1 )
-
-        {
-            isPrivate = "false";
-        }
-        if($(window).width()<480)
-        {
-            document.location.href="/location?id="+this.id+"&isPrivate="+isPrivate;
-        }
-        else
-        {
-            //document.location.href="/location?id="+this.id;
-            $("#location-pane").show('slide',{direction:'right'},500);
-
-
-
-            StationView.locationPaneData (this.id,isPrivate);
-        }
-        var currCenter = map.getCenter();
-
-        map.panTo(currCenter);
-    };
-    Gmap.markers.push(marker);
-    google.maps.event.addListener(marker, 'click', onMarkerClick);
-    Gmap.bounds.extend(marker.position);
-    if(search)
-    {
-        map.fitBounds(Gmap.bounds);
-    }
-    return Gmap.markers.length - 1;
-}
-
-
-
 
 
 Gmap.doMarkerClick = function(markerIndex) {
@@ -442,55 +302,9 @@ Gmap.setCenter = function(lat,lng) {
     map.setZoom(18);
 }
 
-function mapCoordinates(coords) {
-    Gmap.clearMarkers();
-    Gmap.bounds = new google.maps.LatLngBounds();
 
-    for(i in coords) {
-        var marker = new google.maps.Marker({
-            position: coords[i],
-            map: map
-        });
-        Gmap.markers.push(marker);
-        Gmap.bounds.extend(marker.position);
-    }
-    map.fitBounds(Gmap.bounds);
 
-    showCurrentLocation();
-}
 
-function showCurrentLocation() {
-    var myloc = new google.maps.Marker({
-        clickable: false,
-        icon: new google.maps.MarkerImage('//maps.gstatic.com/mapfiles/mobile/mobileimgs2.png',
-            new google.maps.Size(22,22),
-            new google.maps.Point(0,18),
-            new google.maps.Point(11,11)),
-        shadow: null,
-        zIndex: 999,
-        map: map
-    });
-
-    var me;
-    if (navigator.geolocation)
-    {
-        navigator.geolocation.getCurrentPosition(function(pos) {
-            console.log("in getcurrentpos");
-            me = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
-            myloc.setPosition(me);
-            Gmap.bounds.extend(myloc.position);
-            map.fitBounds(Gmap.bounds);
-            map.setCenter(me);
-            map.setZoom(15);
-            map.panTo(me);
-
-        }, function(){//alert('Error Getting Location');
-        });
-    }
-    console.log("myloc");
-    console.log(myloc);
-    return myloc;
-}
 function convertMeterstoMiles(meters)
 {
     return meters/1609.344;
