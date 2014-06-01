@@ -1,0 +1,344 @@
+{
+  "meta" : {
+    "view" : {
+      "id" : "sr66-6ddz",
+      "name" : "Estimate of Daily Vehicle-Miles Traveled in the City of Los Angeles",
+      "attribution" : "Caltrans",
+      "attributionLink" : "http://www.dot.ca.gov/hq/tsip/hpms/datalibrary.php",
+      "averageRating" : 0,
+      "category" : "Government",
+      "createdAt" : 1400623474,
+      "description" : "This estimate is generated annually by the California Department of Transportation and reported in its California Public Road Data Publication available at http://www.dot.ca.gov/hq/tsip/hpms/datalibrary.php.",
+      "displayType" : "table",
+      "downloadCount" : 1,
+      "indexUpdatedAt" : 1400694717,
+      "licenseId" : "PUBLIC_DOMAIN",
+      "newBackend" : false,
+      "numberOfComments" : 0,
+      "oid" : 8037899,
+      "publicationAppendEnabled" : false,
+      "publicationDate" : 1400625351,
+      "publicationGroup" : 1589032,
+      "publicationStage" : "published",
+      "rowsUpdatedAt" : 1400625296,
+      "rowsUpdatedBy" : "5f3x-mcrb",
+      "tableId" : 1589075,
+      "totalTimesRated" : 0,
+      "viewCount" : 20,
+      "viewLastModified" : 1400625351,
+      "viewType" : "tabular",
+      "columns" : [ {
+        "id" : -1,
+        "name" : "sid",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":sid",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "id",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":id",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "position",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":position",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "created_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "created_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "updated_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "updated_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : 149269146,
+        "name" : "Date Name",
+        "dataTypeName" : "text",
+        "fieldName" : "date_name",
+        "position" : 1,
+        "renderTypeName" : "text",
+        "tableColumnId" : 19846600,
+        "width" : 208,
+        "cachedContents" : {
+          "non_null" : 12,
+          "smallest" : "2001",
+          "null" : 0,
+          "largest" : "2012",
+          "top" : [ {
+            "count" : 20,
+            "item" : "2001"
+          }, {
+            "count" : 19,
+            "item" : "2002"
+          }, {
+            "count" : 18,
+            "item" : "2003"
+          }, {
+            "count" : 17,
+            "item" : "2004"
+          }, {
+            "count" : 16,
+            "item" : "2005"
+          }, {
+            "count" : 15,
+            "item" : "2006"
+          }, {
+            "count" : 14,
+            "item" : "2007"
+          }, {
+            "count" : 13,
+            "item" : "2008"
+          }, {
+            "count" : 12,
+            "item" : "2009"
+          }, {
+            "count" : 11,
+            "item" : "2010"
+          }, {
+            "count" : 10,
+            "item" : "2011"
+          }, {
+            "count" : 9,
+            "item" : "2012"
+          } ]
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "false",
+          "align" : "right"
+        }
+      }, {
+        "id" : 149269147,
+        "name" : "Date Value",
+        "dataTypeName" : "calendar_date",
+        "fieldName" : "date_value",
+        "position" : 2,
+        "renderTypeName" : "calendar_date",
+        "tableColumnId" : 19846601,
+        "width" : 220,
+        "cachedContents" : {
+          "non_null" : 12,
+          "smallest" : "2001-01-01T00:00:00",
+          "null" : 0,
+          "largest" : "2012-01-01T00:00:00",
+          "top" : [ {
+            "count" : 20,
+            "item" : "2001-01-01T00:00:00"
+          }, {
+            "count" : 19,
+            "item" : "2002-01-01T00:00:00"
+          }, {
+            "count" : 18,
+            "item" : "2003-01-01T00:00:00"
+          }, {
+            "count" : 17,
+            "item" : "2004-01-01T00:00:00"
+          }, {
+            "count" : 16,
+            "item" : "2005-01-01T00:00:00"
+          }, {
+            "count" : 15,
+            "item" : "2006-01-01T00:00:00"
+          }, {
+            "count" : 14,
+            "item" : "2007-01-01T00:00:00"
+          }, {
+            "count" : 13,
+            "item" : "2008-01-01T00:00:00"
+          }, {
+            "count" : 12,
+            "item" : "2009-01-01T00:00:00"
+          }, {
+            "count" : 11,
+            "item" : "2010-01-01T00:00:00"
+          }, {
+            "count" : 10,
+            "item" : "2011-01-01T00:00:00"
+          }, {
+            "count" : 9,
+            "item" : "2012-01-01T00:00:00"
+          } ]
+        },
+        "format" : {
+          "view" : "date_y",
+          "align" : "left"
+        }
+      }, {
+        "id" : 149269148,
+        "name" : "Daily Estimated VMT for Los Angeles",
+        "dataTypeName" : "number",
+        "fieldName" : "daily_estimated_vmt_for_los_angeles_000s",
+        "position" : 3,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19846602,
+        "width" : 604,
+        "cachedContents" : {
+          "non_null" : 12,
+          "smallest" : "40842000",
+          "sum" : "513271310",
+          "null" : 0,
+          "average" : "42772609.16666667",
+          "largest" : "44552320",
+          "top" : [ {
+            "count" : 20,
+            "item" : "42700550"
+          }, {
+            "count" : 19,
+            "item" : "44552320"
+          }, {
+            "count" : 18,
+            "item" : "44085290"
+          }, {
+            "count" : 17,
+            "item" : "44116190"
+          }, {
+            "count" : 16,
+            "item" : "43370630"
+          }, {
+            "count" : 15,
+            "item" : "43577950"
+          }, {
+            "count" : 14,
+            "item" : "43346090"
+          }, {
+            "count" : 13,
+            "item" : "42219480"
+          }, {
+            "count" : 12,
+            "item" : "41508870"
+          }, {
+            "count" : 11,
+            "item" : "41579000"
+          }, {
+            "count" : 10,
+            "item" : "40842000"
+          }, {
+            "count" : 9,
+            "item" : "41372940"
+          } ]
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "false",
+          "align" : "right"
+        }
+      } ],
+      "grants" : [ {
+        "inherited" : false,
+        "type" : "viewer",
+        "flags" : [ "public" ]
+      } ],
+      "license" : {
+        "name" : "Public Domain"
+      },
+      "metadata" : {
+        "renderTypeConfig" : {
+          "visible" : {
+            "page" : true,
+            "table" : true
+          }
+        },
+        "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+        "jsonQuery" : {
+          "order" : [ {
+            "ascending" : true,
+            "columnFieldName" : "daily_estimated_vmt_for_los_angeles_000s"
+          } ]
+        }
+      },
+      "owner" : {
+        "id" : "5f3x-mcrb",
+        "displayName" : "Carter Rubin",
+        "roleName" : "administrator",
+        "screenName" : "Carter Rubin",
+        "rights" : [ "create_datasets", "edit_others_datasets", "edit_sdp", "edit_site_theme", "moderate_comments", "manage_users", "chown_datasets", "edit_nominations", "approve_nominations", "feature_items", "federations", "manage_stories", "manage_approval", "change_configurations", "view_domain", "view_others_datasets", "edit_pages", "create_pages", "view_goals", "view_dashboards", "edit_goals", "edit_dashboards", "create_dashboards" ]
+      },
+      "query" : {
+        "orderBys" : [ {
+          "ascending" : true,
+          "expression" : {
+            "columnId" : 149269148,
+            "type" : "column"
+          }
+        } ]
+      },
+      "rights" : [ "read" ],
+      "sortBys" : [ {
+        "id" : 0,
+        "viewColumnId" : 149269148,
+        "flags" : [ "asc" ]
+      } ],
+      "tableAuthor" : {
+        "id" : "5f3x-mcrb",
+        "displayName" : "Carter Rubin",
+        "roleName" : "administrator",
+        "screenName" : "Carter Rubin",
+        "rights" : [ "create_datasets", "edit_others_datasets", "edit_sdp", "edit_site_theme", "moderate_comments", "manage_users", "chown_datasets", "edit_nominations", "approve_nominations", "feature_items", "federations", "manage_stories", "manage_approval", "change_configurations", "view_domain", "view_others_datasets", "edit_pages", "create_pages", "view_goals", "view_dashboards", "edit_goals", "edit_dashboards", "create_dashboards" ]
+      },
+      "tags" : [ "vehicle-miles traveled", "vmt", "mobility", "livable and sustainable" ],
+      "flags" : [ "default" ]
+    }
+  },
+  "data" : [ [ 11, "2505ED65-DFDD-43A8-B643-F96D2555FDDE", 11, 1400623477, "879226", 1400625247, "879226", null, "2011", "2011-01-01T00:00:00", "40842000" ]
+, [ 12, "DE9AB1F5-1CC9-4A45-BF5C-BA0C71DA4EBF", 12, 1400623477, "879226", 1400625256, "879226", null, "2012", "2012-01-01T00:00:00", "41372940" ]
+, [ 9, "586497DA-D4E8-4DED-9EE0-25E44E87F043", 9, 1400623477, "879226", 1400625239, "879226", null, "2009", "2009-01-01T00:00:00", "41508870" ]
+, [ 10, "CA4C5B73-80EB-430F-9934-547BDFD1ACBF", 10, 1400623477, "879226", 1400625243, "879226", null, "2010", "2010-01-01T00:00:00", "41579000" ]
+, [ 8, "B8BDB966-FA9D-44E3-9E59-E2065677FA14", 8, 1400623477, "879226", 1400625232, "879226", null, "2008", "2008-01-01T00:00:00", "42219480" ]
+, [ 1, "1CE78105-05BE-4AEE-8AF0-876048FEC222", 1, 1400623477, "879226", 1400625184, "879226", null, "2001", "2001-01-01T00:00:00", "42700550" ]
+, [ 7, "4E6FBE29-D832-41A2-A54A-56006501DFDE", 7, 1400623477, "879226", 1400625220, "879226", null, "2007", "2007-01-01T00:00:00", "43346090" ]
+, [ 5, "86D3BFA5-D6C3-4D1F-8AA3-98AE437F3323", 5, 1400623477, "879226", 1400625209, "879226", null, "2005", "2005-01-01T00:00:00", "43370630" ]
+, [ 6, "BC0711E8-1703-4AFE-A366-8D8DEC4D9CDA", 6, 1400623477, "879226", 1400625215, "879226", null, "2006", "2006-01-01T00:00:00", "43577950" ]
+, [ 3, "C6EF3D38-184F-48FF-8048-B90AC7108A14", 3, 1400623477, "879226", 1400625197, "879226", null, "2003", "2003-01-01T00:00:00", "44085290" ]
+, [ 4, "FF5AC35C-A4D2-4AB2-92BA-115187E113C1", 4, 1400623477, "879226", 1400625204, "879226", null, "2004", "2004-01-01T00:00:00", "44116190" ]
+, [ 2, "7D063A40-CB26-4F55-A28A-B5FB7CFE679E", 2, 1400623477, "879226", 1400625191, "879226", null, "2002", "2002-01-01T00:00:00", "44552320" ]
+ ]
+}
