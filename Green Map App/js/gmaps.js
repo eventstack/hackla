@@ -89,7 +89,7 @@ Gmap.calcRouter=function () {
         $("#waitButton").hide(500) ;
         $("#routeButton").show(500)
 
-    }, 5000);
+    }, 8000);
     $("#routeButton").hide(500) ;
     $("#waitButton").show(500) ;
     try {
