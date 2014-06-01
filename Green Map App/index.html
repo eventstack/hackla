@@ -18,7 +18,7 @@
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
-      <script src="js/funfacts.js"></script>
+
 
     <![endif]-->
   </head>
@@ -140,13 +140,16 @@
     <script src="js/emissions.js"></script>
     <script src="js/evcloud-api-core-3_0.js"></script>
     <script src="js/esri.js"></script>
+    <script src="js/funfacts.js"></script>
         <script>
 
             $ ( document ).ready ( function ( ) {
                 loadStationJSON();
                 $("#green-map" ).css("width",$(window).width()*.90);
                 $("#green-map" ).css("height",$(window).height()*.80);
+
                 window.onload = Gmap.loadMapScript;
+
 
 
                 $( window ).resize(function() {
