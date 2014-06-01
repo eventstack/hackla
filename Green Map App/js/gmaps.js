@@ -89,13 +89,13 @@ Gmap.calcRouter=function () {
         $("#waitButton").hide(500) ;
         $("#routeButton").show(500)
 
-    }, 8000);
+    }, 5000);
     $("#routeButton").hide(500) ;
     $("#waitButton").show(500) ;
     try {
         resetVars();
-        directionsDisplay.setMap();
-        directionsDisplay2.setMap();
+        directionsDisplay.setMap(null);
+        directionsDisplay2.setMap(null);
         console.log("here");
     }
     catch(e)
@@ -191,11 +191,15 @@ function mapRoutes2() {
 
     if (minIndex != -1) {
 
+        if(typeof directionsDisplay == 'undefined')
         directionsDisplay = new google.maps.DirectionsRenderer();
+
         directionsDisplay.setMap(map);
         directionsDisplay.setDirections(firstLegs[minIndex]);
 
+        if(typeof directionsDisplay2 == 'undefined')
         directionsDisplay2 = new google.maps.DirectionsRenderer();
+
         directionsDisplay2.setMap(map);
         directionsDisplay2.setDirections(secondLegs[minIndex]);
 
