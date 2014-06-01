@@ -1,0 +1,259 @@
+{
+  "meta" : {
+    "view" : {
+      "id" : "xt7d-syrn",
+      "name" : "SAN - Emissions Chart (CO2)",
+      "averageRating" : 0,
+      "category" : "Government",
+      "createdAt" : 1400783076,
+      "description" : "This metric is the total Green House Gas (GHG) emissions (in tons CO2) that the City emits through internal operations. A lower number means that the City is emitting less GHGs through operations. To learn more about Climate Change and Green House Gas emissions, visit http://environmentla.org/ead_climatechange.htm",
+      "displayType" : "chart",
+      "downloadCount" : 1,
+      "indexUpdatedAt" : 1400783326,
+      "newBackend" : false,
+      "numberOfComments" : 0,
+      "oid" : 8052227,
+      "publicationAppendEnabled" : false,
+      "publicationDate" : 1400782963,
+      "publicationGroup" : 1591582,
+      "publicationStage" : "published",
+      "rowsUpdatedAt" : 1400782848,
+      "rowsUpdatedBy" : "tyhz-nfmm",
+      "tableId" : 1591582,
+      "totalTimesRated" : 0,
+      "viewCount" : 7,
+      "viewLastModified" : 1400783076,
+      "viewType" : "tabular",
+      "columns" : [ {
+        "id" : -1,
+        "name" : "sid",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":sid",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "id",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":id",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "position",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":position",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "created_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "created_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "updated_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "updated_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : -1,
+        "name" : "meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : {
+        }
+      }, {
+        "id" : 149585547,
+        "name" : "Date Name",
+        "dataTypeName" : "text",
+        "fieldName" : "date_name",
+        "position" : 1,
+        "renderTypeName" : "text",
+        "tableColumnId" : 19889220,
+        "width" : 208,
+        "cachedContents" : {
+          "non_null" : 4,
+          "smallest" : "2009",
+          "null" : 0,
+          "largest" : "2012",
+          "top" : [ {
+            "count" : 20,
+            "item" : "2009"
+          }, {
+            "count" : 19,
+            "item" : "2010"
+          }, {
+            "count" : 18,
+            "item" : "2011"
+          }, {
+            "count" : 17,
+            "item" : "2012"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 149585548,
+        "name" : "Date Value",
+        "dataTypeName" : "calendar_date",
+        "fieldName" : "date_value",
+        "position" : 2,
+        "renderTypeName" : "calendar_date",
+        "tableColumnId" : 19889221,
+        "width" : 220,
+        "cachedContents" : {
+          "non_null" : 4,
+          "smallest" : "2009-12-31T00:00:00",
+          "null" : 0,
+          "largest" : "2012-12-31T00:00:00",
+          "top" : [ {
+            "count" : 20,
+            "item" : "2009-12-31T00:00:00"
+          }, {
+            "count" : 19,
+            "item" : "2010-12-31T00:00:00"
+          }, {
+            "count" : 18,
+            "item" : "2011-12-31T00:00:00"
+          }, {
+            "count" : 17,
+            "item" : "2012-12-31T00:00:00"
+          } ]
+        },
+        "format" : {
+        }
+      }, {
+        "id" : 149585549,
+        "name" : "City Operations GHG Emissions (in tons C02)",
+        "dataTypeName" : "number",
+        "fieldName" : "city_operations_ghg_emissions_in_tons_c02",
+        "position" : 3,
+        "renderTypeName" : "number",
+        "tableColumnId" : 19889222,
+        "width" : 616,
+        "cachedContents" : {
+          "non_null" : 4,
+          "smallest" : "11367330",
+          "sum" : "48268848",
+          "null" : 0,
+          "average" : "12067212",
+          "largest" : "12766980",
+          "top" : [ {
+            "count" : 20,
+            "item" : "12766980"
+          }, {
+            "count" : 19,
+            "item" : "12343720"
+          }, {
+            "count" : 18,
+            "item" : "11790818"
+          }, {
+            "count" : 17,
+            "item" : "11367330"
+          } ]
+        },
+        "format" : {
+        }
+      } ],
+      "displayFormat" : {
+        "hideDsgMsg" : false,
+        "valueColumns" : [ {
+          "color" : "#003366",
+          "fieldName" : "city_operations_ghg_emissions_in_tons_c02"
+        } ],
+        "fixedColumns" : [ "date_name" ],
+        "seriesColumns" : [ {
+        } ],
+        "pointSize" : "3",
+        "smoothLine" : false,
+        "lineSize" : "2",
+        "sortSeries" : false,
+        "chartType" : "line",
+        "yAxis" : {
+          "formatter" : {
+            "abbreviate" : true
+          }
+        },
+        "dataLabels" : false,
+        "legendDetails" : {
+          "showSeries" : true,
+          "showValueMarkers" : true
+        },
+        "legend" : "bottom",
+        "descriptionColumns" : [ {
+        } ]
+      },
+      "grants" : [ {
+        "inherited" : true,
+        "type" : "viewer",
+        "flags" : [ "public" ]
+      } ],
+      "metadata" : {
+        "renderTypeConfig" : {
+          "visible" : {
+            "chart" : true,
+            "table" : true
+          }
+        },
+        "availableDisplayTypes" : [ "chart", "table", "fatrow", "page" ]
+      },
+      "owner" : {
+        "id" : "tyhz-nfmm",
+        "displayName" : "Miguel Sangalang",
+        "roleName" : "publisher",
+        "screenName" : "Miguel Sangalang",
+        "rights" : [ "create_datasets", "edit_others_datasets", "edit_nominations", "approve_nominations", "moderate_comments", "manage_stories", "feature_items", "change_configurations", "view_domain", "view_others_datasets", "create_pages", "edit_pages", "view_goals", "view_dashboards", "edit_goals", "edit_dashboards" ]
+      },
+      "query" : {
+      },
+      "rights" : [ "read" ],
+      "tableAuthor" : {
+        "id" : "tyhz-nfmm",
+        "displayName" : "Miguel Sangalang",
+        "roleName" : "publisher",
+        "screenName" : "Miguel Sangalang",
+        "rights" : [ "create_datasets", "edit_others_datasets", "edit_nominations", "approve_nominations", "moderate_comments", "manage_stories", "feature_items", "change_configurations", "view_domain", "view_others_datasets", "create_pages", "edit_pages", "view_goals", "view_dashboards", "edit_goals", "edit_dashboards" ]
+      },
+      "tags" : [ "san", "ghg", "green house gas", "emissions", "climate change" ]
+    }
+  },
+  "data" : [ [ 1, "955CFB09-96F1-4C4C-88D6-816D79A607FC", 1, 1400782846, "865572", 1400782846, "865572", "{\n}", "2009", "2009-12-31T00:00:00", "12766980" ]
+, [ 2, "EBB1CBEB-0814-4457-9F89-AD9BFE22A056", 2, 1400782846, "865572", 1400782846, "865572", "{\n}", "2010", "2010-12-31T00:00:00", "12343720" ]
+, [ 3, "EF35F141-A7EE-4AC9-87D1-A284DBB23180", 3, 1400782846, "865572", 1400782846, "865572", "{\n}", "2011", "2011-12-31T00:00:00", "11790818" ]
+, [ 4, "4912F7EB-6F9A-4926-B0DA-049FA824D573", 4, 1400782846, "865572", 1400782846, "865572", "{\n}", "2012", "2012-12-31T00:00:00", "11367330" ]
+ ]
+}
