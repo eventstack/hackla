@@ -30,7 +30,7 @@ Gmap.loadMapScript = function() {
     Gmap.initialized = true;
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDAlreV0EeC9Li1d-EEN0dEVPXey8bNSDw&sensor=FALSE&callback=Gmap.initialize";
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDDwSi-69znhkOsJq6Ok_g9tmi8Z-Y1Odg&sensor=FALSE&callback=Gmap.initialize";
     document.body.appendChild(script);
 }
 
