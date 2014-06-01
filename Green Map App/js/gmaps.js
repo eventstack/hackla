@@ -67,11 +67,31 @@ Gmap.directionsService=null;
 
 
 var i = 0;
-var direction_results_leg1 = [];
-var min_leg1_pair = null;
-var chargeStationData= {};
-var directionsService;
+function resetVars()
+{
+     rad = 0;
+    emissions = 0;
+     dist_in_miles = 0;
+     locations = [];
+     stationIndex = 0;
+     secondLegIndex = 0;
+     originAddress = "13320 Beach Ave 90292";
+     destAddress = "Dodger Stadium";
+     firstLegs = [];
+     secondLegs = [];
+     directionsDisplay;
+     directionsDisplay2;
+}
 Gmap.calcRouter=function () {
+    try {
+        resetVars();
+        directionsDisplay.setMap(null);
+        directionsDisplay2.setMap(null);
+    }
+    catch(e)
+    {
+
+    }
    originAddress = document.getElementById("start-address").value;
    destAddress = document.getElementById("end-address").value;
     Gmap.directionsService= new google.maps.DirectionsService();
@@ -177,7 +197,7 @@ function mapRoutes2() {
         }
         emissions+=calculateEmissionsForLightRail(secondLegMiles);
         $("#savingsText").text("Estimated Green House Gas Savings(kg of CO2):"+emissions.toFixed(2));
-        console.log(firstLegMiles+" "+secondLegMiles);
+
     }
 }
 
