@@ -122,10 +122,17 @@ Gmap.calcRouter=function () {
     else
     {
          var k  = 0;
-        var origin={};
-        origin.latitude=lat;
-        origin.longitude=long;
-        console.log(origin);
+
+
+        geocode(originAddress,function(origin)
+        {
+
+            console.log("origin" + origin);
+            var newOrigin=$.parseJSON(origin);
+        console.log(newOrigin);
+            console.log(newOrigin.candidates);
+            origin.latitude=newOrigin.candidates[0].location.y;
+            origin.longitude=newOrigin.candidates[0].location.x;
         returnTop5Stations(origin,function(stations) {
              console.log(stations);
             stations.forEach(function(station) {
@@ -162,6 +169,7 @@ Gmap.calcRouter=function () {
                 });
             });
 
+        });
         });
     }
 

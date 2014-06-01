@@ -56,7 +56,7 @@ function returnTop5Stations(origin,callback)
     {
 
         stations.sort(function(a,b){
-            console.log(a.latitude + " "+origin.latitude);
+           // console.log(a.latitude + " "+origin.latitude);
             var p1 = new google.maps.LatLng(origin);
             var p2 = new google.maps.LatLng(a);
 
@@ -71,11 +71,11 @@ function returnTop5Stations(origin,callback)
 
             b.distanceFromOrgin=distB;
 
-            console.log(a.distanceFromOrgin+" - "+ b.distanceFromOrgin);
+           // console.log(a.distanceFromOrgin+" - "+ b.distanceFromOrgin);
             return distB-distA;
 
         });
-        console.log(stations.length);
+        //console.log(stations.length);
        callback(stations.slice(0,5));
 
     });
