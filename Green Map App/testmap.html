@@ -16,7 +16,7 @@
 <script src="https://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha256.js"></script>
 <script src="https://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-base64-min.js"></script>
 <script src="js/evcloud-api-core-3_0.js" type="text/javascript"></script>
-
+<script src="js/loadStationJSON.js" type="text/javascript"></script>
 <script type="text/javascript">
 var map;
 var locations = [];
@@ -48,6 +48,7 @@ $ ( document ).ready ( function ( ) {
         routeNext();
     });
 
+    markStations(map);
 });
 
 function routeComparator(a,b) {
