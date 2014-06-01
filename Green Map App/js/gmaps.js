@@ -286,7 +286,7 @@ function mapRoutes2() {
         console.log(emissionsSaved);
 
         $("#savingsText").text("Estimated Green House Gas Savings(kg of CO2):"+(emissionsSaved).toFixed(2));
-        $("#savingsText2").text("My route has a Green House Gas Savings of(kg of CO2):"+(emissionsSaved).toFixed(2)+". How much can you save? goo.gl/X8SZva");
+        $("#savingsText2").text("My route has a Green House Gas Savings of :"+(emissionsSaved).toFixed(2)+" (kg of CO2). How much can you save? goo.gl/X8SZva");
 
         document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block';
             $("#funFactText").text(getFunFact());
