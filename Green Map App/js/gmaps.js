@@ -24,6 +24,8 @@ var allowedToSendReqest=true;
 var lat;
 var long;
 
+loadGhgData();
+var ghgData = [];
 
 Gmap.loadMapScript = function() {
 
@@ -285,7 +287,9 @@ function mapRoutes2() {
         console.log(emissionsSaved);
 
         $("#savingsText").text("Estimated Green House Gas Savings(kg of CO2):"+(emissionsSaved).toFixed(2));
-        $("#savingsText2").text("My route has a Green House Gas Savings(kg of CO2):"+(emissionsSaved).toFixed(2)+". How much can you save? goo.gl/X8SZva");
+        $("#savingsText2").text("My route has a Green House Gas Savings of(kg of CO2):"+(emissionsSaved).toFixed(2)+". How much can you save? goo.gl/X8SZva");
+        console.log(getFunFact());
+        $("#funFactText").text(getFunFact());
         document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block';
         $('#tweetButton').click(function (e) {
 
@@ -302,7 +306,22 @@ function mapRoutes2() {
     }
 }
 
+function loadGhgData() {
+    $.getJSON('JSON/ghg-emissions.json', function(result){
+        result.data.forEach(function(st) {
+            console.log(st);
+            ghgData.push({"year": st[8], "ghgTons": st[10]});
+        });
+    });
+}
 
+
+function getFunFact() {
+    var randomIndex = Math.floor(Math.random() * ghgData.length);
+    console.log(randomIndex);
+    var datum = ghgData[randomIndex];
+    return "Did you know LA operations produced " + datum.ghgTons + " tons of CO2 in " + datum.year+"?";
+}
 function isValidDirectionResult(result) {
     return result != null && result.routes != null && result.routes.length > 0 && result.routes[0].legs != null && result.routes[0].legs.length > 0;
 }

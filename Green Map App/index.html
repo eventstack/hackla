@@ -18,6 +18,7 @@
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
+      <script src="js/funfacts.js"></script>
 
     <![endif]-->
   </head>
@@ -27,7 +28,9 @@
         <div id="light" class="white_content"
              >
             <p id="savingsText2" style="padding: 5px;">Est. Green House Gas Savings(kg of CO2): -- </p>
-            <button href="#fakelink" class="btn btn-block btn-lg btn-success" id="tweetButton" >Post to Twitter</button>
+            <button href="#fakelink" class="btn btn-block btn-lg btn-success" id="tweetButton" >Post to Twitter</button></br>
+            <p id="funFactText" style="padding: 5px;">Est. Green House Gas Savings(kg of CO2): -- </p>
+           <a href="https://data.lacity.org/A%20Livable%20and%20Sustainable%20City" target="_blank">Learn More</a><br/>
             <a href = "javascript:void(0)" onclick = " document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
         <div id="fade" class="black_overlay"></div>
 
@@ -60,16 +63,17 @@
             </div>
     </div>
         <div class="map-container" id="map" >
-            <div id="search-box" style="padding: 25px;" class=" col-xs-5 search-box controls-search" >
-                <div style="background-color: #FFFFFF; box-shadow: 5px 5px 2px #888888;padding: 20px;" class="row">
+            <div id="search-box" style="padding: 10px;" class=" col-xs-5 search-box controls-search" >
+                <div style="background-color: #FFFFFF; box-shadow: 5px 5px 2px #888888;padding: 10px;" class="row">
                    <div class="col-xs-12">
                   <form id="frm">
+                      <p>Find a Route</p>
                 <input id="start-address"   type="text" placeholder="Start Address" style="padding: 2px;" class="form-control">
                 <input id="end-address"   type="text" placeholder="End Address" style="padding: 2px;" class="form-control">
                        <div style="display: none"id="search-criteria" class="col-xs-12 center">
                            <div class="row" style="background-color:#FFFFFF ">
                                <div class="col-xs-12">
-                                   <h5 class="demo-panel-title">Modes of Transportation</h5>
+                                   <h6 class="demo-panel-title">Modes of Transportation</h6>
                                    <label class="checkbox" for="evCheckBox">
                                        <input type="checkbox" value="" id="evCheckBox" name="evCheckBox" data-toggle="checkbox">
                                        Electric Vehicle
