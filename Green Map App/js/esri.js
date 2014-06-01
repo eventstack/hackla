@@ -10,7 +10,7 @@ function reverseGeocode(latitude, longitude, callback) {
         {
             "Accept": "application/json"
         }
-    }).success(callback).error(function(data) {
+    }).success(function(response){callback(response)}).error(function(data) {
         console.log("error");
         $("#response").text(data.responseText);
     });

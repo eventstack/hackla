@@ -23,6 +23,15 @@
   </head>
   <body>
     <div class="container">
+        <p>This is the main content. To display a lightbox click
+
+            <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block';">here</a></p>
+        <div id="light" class="white_content"
+             >
+            <p id="savingsText2" style="padding: 5px;">Est. Green House Gas Savings(kg of CO2): -- </p>
+            <button href="#fakelink" class="btn btn-block btn-lg btn-success" id="tweetButton" >Post to Twitter</button>
+            <a href = "javascript:void(0)" onclick = " document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+        <div id="fade" class="black_overlay"></div>
 
         <div class="row demo-row"  style="padding: 5px; ">
 
@@ -128,6 +137,7 @@
     <script src="js/gmaps.js"></script>
     <script src="js/emissions.js"></script>
     <script src="js/evcloud-api-core-3_0.js"></script>
+    <script src="js/esri.js"></script>
         <script>
 
             $ ( document ).ready ( function ( ) {

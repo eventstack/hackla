@@ -21,6 +21,8 @@ var secondLegs = [];
 var directionsDisplay;
 var directionsDisplay2;
 var allowedToSendReqest=true;
+var lat;
+var long;
 
 
 Gmap.loadMapScript = function() {
@@ -106,13 +108,63 @@ Gmap.calcRouter=function () {
    destAddress = document.getElementById("end-address").value;
     Gmap.directionsService= new google.maps.DirectionsService();
 
-    getEvcLocations(function(chargeStationData) {
-        console.log(chargeStationData);
-        locations = chargeStationData.locations;
-        stationIndex = 0;
 
-        routeNext();
-    });
+
+    if($('#evCheckBox').is(':checked') ) {
+        getEvcLocations(function(chargeStationData) {
+            console.log(chargeStationData);
+            locations = chargeStationData.locations;
+            stationIndex = 0;
+
+            routeNext();
+        });
+    }
+    else
+    {
+         var k  = 0;
+        var origin={};
+        origin.latitude=lat;
+        origin.longitude=long;
+        console.log(origin);
+        returnTop5Stations(origin,function(stations) {
+             console.log(stations);
+            stations.forEach(function(station) {
+
+                reverseGeocode(station.latitude,station.longitude, function(data){
+
+
+                    if(k>= stations.length-1)
+                    {
+                        console.log("here");
+                        routeNext();
+                    }
+                    else
+                    {
+
+                        try {
+
+                            data = $.parseJSON(data);
+                            var location = {};
+                            location.address = data.address.Address;
+                            location.zipcode = data.address.Postal;
+                            console.log(location);
+                            locations.push(location);
+                        }
+                        catch (e)
+                        {
+
+                        }
+                        k++;
+                    }
+
+
+
+                });
+            });
+
+        });
+    }
+
 }
 function routeComparator(a,b) {
     return getResultDistance(a) - getResultDistance(b);
@@ -120,6 +172,8 @@ function routeComparator(a,b) {
 
 function routeNext() {
     var location = locations[stationIndex];
+
+
     var chargeStationAddress = location.address + " " + location.zipcode;
     console.log(chargeStationAddress);
     getDrivingDirections(originAddress, chargeStationAddress, function(result) {
@@ -223,6 +277,19 @@ function mapRoutes2() {
         console.log(emissionsSaved);
 
         $("#savingsText").text("Estimated Green House Gas Savings(kg of CO2):"+(emissionsSaved).toFixed(2));
+        $("#savingsText2").text("My route has a Green House Gas Savings(kg of CO2):"+(emissionsSaved).toFixed(2)+". How much can you save? goo.gl/X8SZva");
+        document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block';
+        $('#tweetButton').click(function (e) {
+
+            var textToTweet = $("#savingsText2").text();
+            if (textToTweet.length > 140) {
+                alert('Tweet should be less than 140 Chars');
+            }
+            else {
+                var twtLink = 'http://twitter.com/home?status=' +encodeURIComponent(textToTweet);
+                window.open(twtLink,'_blank');
+            }
+        });
 
     }
 }
@@ -241,8 +308,8 @@ function geoError() {
     alert("Geocoder failed.");
 }
 function geoSuccess(position) {
-    var lat = position.coords.latitude;
-    var lng = position.coords.longitude;
+    lat = position.coords.latitude;
+    long = position.coords.longitude;
     //alert("lat:" + lat + " lng:" + lng);
     Gmap.addMarker(position.coords.latitude,position.coords.longitude,"Staring location You are here");
     var latLng= new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
